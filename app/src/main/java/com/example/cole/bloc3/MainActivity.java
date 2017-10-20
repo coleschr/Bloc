@@ -75,10 +75,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     icon[screen].setColorFilter(getColor(R.color.colorNotClicked));
                     screen = 0;
                     icon[screen].setColorFilter(getColor(R.color.colorAccent));
-                } else { //607D8B
+                } else { //F57C00
                     icon[screen].setColorFilter(Color.rgb(96, 125, 139));
                     screen = 0;
-                    icon[screen].setColorFilter(Color.rgb(255, 109, 0));
+                    icon[screen].setColorFilter(Color.rgb(245, 124, 0));
                 }
                 Toast.makeText(this, "home", Toast.LENGTH_SHORT).show();
                 break;
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 } else {
                     icon[screen].setColorFilter(Color.rgb(96, 125, 139));
                     screen = 2;
-                    icon[screen].setColorFilter(Color.rgb(255, 109, 0));
+                    icon[screen].setColorFilter(Color.rgb(245, 124, 0));
                 }
                 Toast.makeText(this, "products", Toast.LENGTH_SHORT).show();
                 break;
@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 } else {
                     icon[screen].setColorFilter(Color.rgb(96, 125, 139));
                     screen = 3;
-                    icon[screen].setColorFilter(Color.rgb(255, 109, 0));
+                    icon[screen].setColorFilter(Color.rgb(245, 124, 0));
                 }
                 Toast.makeText(this, "contact", Toast.LENGTH_SHORT).show();
                 break;
@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 } else {
                     icon[screen].setColorFilter(Color.rgb(96, 125, 139));
                     screen = 4;
-                    icon[screen].setColorFilter(Color.rgb(255, 109, 0));
+                    icon[screen].setColorFilter(Color.rgb(245, 124, 0));
                 }
                 Toast.makeText(this, "explore", Toast.LENGTH_SHORT).show();
                 break;
