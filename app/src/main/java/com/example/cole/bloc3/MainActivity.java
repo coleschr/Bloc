@@ -9,7 +9,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import static com.example.cole.bloc3.R.id.about;
 import static com.example.cole.bloc3.R.id.contact;
@@ -71,72 +70,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.home:
                 currentFragment = new FragmentHome();
                 switchToNewScreen();
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                    icon[screen].setColorFilter(getColor(R.color.colorNotClicked));
-                    screen = 0;
-                    icon[screen].setColorFilter(getColor(R.color.colorAccent));
-                } else { //F57C00
-                    icon[screen].setColorFilter(Color.rgb(96, 125, 139));
-                    screen = 0;
-                    icon[screen].setColorFilter(Color.rgb(245, 124, 0));
-                }
-                Toast.makeText(this, "home", Toast.LENGTH_SHORT).show();
+                changeIconColors(0);
                 break;
             case about:
                 currentFragment = new FragmentAbout();
                 switchToNewScreen();
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                    icon[screen].setColorFilter(getColor(R.color.colorNotClicked));
-                    screen = 1;
-                    icon[screen].setColorFilter(getColor(R.color.colorAccent));
-                } else {
-                    icon[screen].setColorFilter(Color.rgb(96, 125, 139));
-                    screen = 1;
-                    icon[screen].setColorFilter(Color.rgb(255, 109, 0));
-                }
-                Toast.makeText(this, "about", Toast.LENGTH_SHORT).show();
+                changeIconColors(1);
                 break;
             case products:
                 currentFragment = new FragmentProducts();
                 switchToNewScreen();
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                    icon[screen].setColorFilter(getColor(R.color.colorNotClicked));
-                    screen = 2;
-                    icon[screen].setColorFilter(getColor(R.color.colorAccent));
-                } else {
-                    icon[screen].setColorFilter(Color.rgb(96, 125, 139));
-                    screen = 2;
-                    icon[screen].setColorFilter(Color.rgb(245, 124, 0));
-                }
-                Toast.makeText(this, "products", Toast.LENGTH_SHORT).show();
+                changeIconColors(2);
                 break;
             case contact:
                 currentFragment = new FragmentContact();
                 switchToNewScreen();
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                    icon[screen].setColorFilter(getColor(R.color.colorNotClicked));
-                    screen = 3;
-                    icon[screen].setColorFilter(getColor(R.color.colorAccent));
-                } else {
-                    icon[screen].setColorFilter(Color.rgb(96, 125, 139));
-                    screen = 3;
-                    icon[screen].setColorFilter(Color.rgb(245, 124, 0));
-                }
-                Toast.makeText(this, "contact", Toast.LENGTH_SHORT).show();
+                changeIconColors(3);
                 break;
             case explore:
                 currentFragment = new FragmentExplore();
                 switchToNewScreen();
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                    icon[screen].setColorFilter(getColor(R.color.colorNotClicked));
-                    screen = 4;
-                    icon[screen].setColorFilter(getColor(R.color.colorAccent));
-                } else {
-                    icon[screen].setColorFilter(Color.rgb(96, 125, 139));
-                    screen = 4;
-                    icon[screen].setColorFilter(Color.rgb(245, 124, 0));
-                }
-                Toast.makeText(this, "explore", Toast.LENGTH_SHORT).show();
+                changeIconColors(4);
                 break;
         }
     }
@@ -148,6 +102,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             fm.beginTransaction()
                     .replace(R.id.fragment_container, currentFragment)
                     .commit();
+        }
+    }
+
+    private void changeIconColors(int newScreen) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            icon[screen].setColorFilter(getColor(R.color.colorNotClicked));
+            screen = newScreen;
+            icon[screen].setColorFilter(getColor(R.color.colorAccent));
+        } else {
+            icon[screen].setColorFilter(Color.rgb(96, 125, 139)); //colorNotClicked
+            screen = newScreen;
+            icon[screen].setColorFilter(Color.rgb(245, 124, 0)); //colorAccent
         }
     }
 }
