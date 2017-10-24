@@ -6,12 +6,15 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 /**
  * Created by Cole on 10/16/17.
  */
 
 public class FragmentHome extends Fragment {
+    private TextView missionStatement;
+    private String ms;
 
     @Nullable
     @Override
@@ -19,9 +22,14 @@ public class FragmentHome extends Fragment {
         super.onCreateView(inflater, container, savedInstanceState);
         View rootView = inflater.inflate(R.layout.home_fragment, container, false);
 
+        missionStatement= (TextView) rootView.findViewById(R.id.text_ms);
         //wire any widgets -- must use rootView.findViewById
 
+        ms= "With Bloc, instructions are optional. Our customizable modular" +
+                " furniture empowers individuals to break the mold " +
+                "of traditional design and redefine what it means to start over. ";
 
+        missionStatement.setText(ms);
         //get any other initial set up done
 
 
@@ -29,3 +37,4 @@ public class FragmentHome extends Fragment {
         return rootView;
     }
 }
+
