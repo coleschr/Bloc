@@ -5,6 +5,7 @@ package com.example.cole.bloc3;
  */
 
 public class Package {
+    //may need to add more
     private String title, description;
     private int imageID;
 
