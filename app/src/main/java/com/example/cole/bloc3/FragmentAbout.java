@@ -23,10 +23,11 @@ public class FragmentAbout extends Fragment {
         View rootView = inflater.inflate(R.layout.about_fragment, container, false);
 
         //wire any widgets -- must use rootView.findViewById
-
+        companyDesc= (TextView) rootView.findViewById(R.id.textView_company_desc);
+        csr= (TextView) rootView.findViewById(R.id.textView_csr);
 
         //get any other initial set up done
-
+        companyDesc.setText(R.string.desc_company);
 
         //return the view that we inflated
         return rootView;
