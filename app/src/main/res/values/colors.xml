@@ -6,4 +6,5 @@
     <color name="colorBackground">#ECEFF1</color>
     <color name="colorNotClicked">#607D8B</color>
     <color name="colorBottomBar">#FFFFFF</color>
+    <color name="colorTitle">#2F6188</color>
 </resources>
