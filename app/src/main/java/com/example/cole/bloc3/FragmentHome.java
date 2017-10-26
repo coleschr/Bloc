@@ -25,9 +25,7 @@ public class FragmentHome extends Fragment {
         missionStatement= (TextView) rootView.findViewById(R.id.text_ms);
         //wire any widgets -- must use rootView.findViewById
 
-        ms= "With Bloc, instructions are optional. Our customizable modular" +
-                " furniture empowers individuals to break the mold " +
-                "of traditional design and redefine what it means to start over. ";
+        ms= getString(R.string.mission_statement);
 
         missionStatement.setText(ms);
         //get any other initial set up done

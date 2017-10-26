@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Bloc3</string>
+    <string name="mission_statement">With Bloc, instructions are optional. Our customizable modular furniture empowers individuals to break the mold of traditional design and redefine what it means to start over.</string>
+    <string name="about_title">About Us</string>
+    <string name="contact_title">Contact Us</string>
+    <string name="explore_title">Explore</string>
+    <string name="product_title">Products</string>
 </resources>
