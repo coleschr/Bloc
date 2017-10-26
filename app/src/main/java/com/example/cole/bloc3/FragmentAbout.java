@@ -6,12 +6,14 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 /**
  * Created by Cole on 10/16/17.
  */
 
 public class FragmentAbout extends Fragment {
+    private TextView companyDesc, csr;
 
     @Nullable
     @Override

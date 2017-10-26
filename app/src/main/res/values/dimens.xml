@@ -3,4 +3,7 @@
     <dimen name="title_size">40dp</dimen>
     <dimen name="text_size">20dp</dimen>
     <dimen name="above_title_space">20dp</dimen>
+    <dimen name="side_margin">20dp</dimen>
+    <dimen name="btwn_space">40dp</dimen>
+    <dimen name="bottom_scrollview_margin">100dp</dimen>
 </resources>
