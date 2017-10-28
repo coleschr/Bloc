@@ -32,7 +32,7 @@
         android:id="@+id/home"
         android:layout_width="50dp"
         android:layout_height="24dp"
-        app:srcCompat="@drawable/black_home"
+        app:srcCompat="@drawable/ic_home"
         android:tint="@color/colorAccent"
         android:background="@color/colorBottomBar"
         android:layout_marginLeft="8dp"
@@ -90,7 +90,7 @@
         android:id="@+id/explore"
         android:layout_width="50dp"
         android:layout_height="24dp"
-        app:srcCompat="@drawable/explore"
+        app:srcCompat="@drawable/ic_explore"
         android:tint="@color/colorNotClicked"
         android:background="@color/colorBottomBar"
         android:layout_marginRight="8dp"
@@ -108,7 +108,7 @@
 
     <ImageButton
         android:id="@+id/products"
-        app:srcCompat="@drawable/black_block"
+        app:srcCompat="@drawable/ic_block"
         android:tint="@color/colorNotClicked"
         android:background="@color/colorBottomBar"
         android:layout_width="50dp"
