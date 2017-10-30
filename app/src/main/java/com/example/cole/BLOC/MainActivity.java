@@ -1,4 +1,4 @@
-package com.example.cole.bloc3;
+package com.example.cole.BLOC;
 
 import android.graphics.Color;
 import android.os.Build;
@@ -10,16 +10,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 
-import static com.example.cole.bloc3.R.id.about;
-import static com.example.cole.bloc3.R.id.contact;
-import static com.example.cole.bloc3.R.id.explore;
-import static com.example.cole.bloc3.R.id.products;
+import java.util.ArrayList;
+
+import static com.example.cole.BLOC.R.id.about;
+import static com.example.cole.BLOC.R.id.contact;
+import static com.example.cole.BLOC.R.id.explore;
+import static com.example.cole.BLOC.R.id.products;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private ImageButton[] icon;
     private int screen;
     private Fragment currentFragment;
     private ConstraintLayout layout;
+    private ArrayList<Package> packages;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,19 +33,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         wireWidgets();
         setOnClickListeners();
         setUpHomeScreen();
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            layout.setBackgroundColor(getColor(R.color.colorBackground));
-        } else { //ECEFF1
-            layout.setBackgroundColor(Color.rgb(236, 239, 241));
-        }
-
     }
 
     private void setUpHomeScreen() {
         screen = 0;
         currentFragment = new FragmentHome();
         switchToNewScreen();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            layout.setBackgroundColor(getColor(R.color.colorBackground));
+        } else { //ECEFF1
+            layout.setBackgroundColor(Color.rgb(236, 239, 241));
+        }
     }
 
     private void wireWidgets() {
@@ -81,6 +82,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 currentFragment = new FragmentProducts();
                 switchToNewScreen();
                 changeIconColors(2);
+
                 break;
             case contact:
                 currentFragment = new FragmentContact();

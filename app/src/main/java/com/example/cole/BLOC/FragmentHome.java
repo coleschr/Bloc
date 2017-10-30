@@ -1,4 +1,4 @@
-package com.example.cole.bloc3;
+package com.example.cole.BLOC;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

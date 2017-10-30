@@ -14,4 +14,8 @@
         android:layout_marginTop="@dimen/above_title_space"
         android:text="@string/product_title" />
 
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 </LinearLayout>

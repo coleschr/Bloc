@@ -1,4 +1,4 @@
-package com.example.cole.bloc3;
+package com.example.cole.BLOC;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

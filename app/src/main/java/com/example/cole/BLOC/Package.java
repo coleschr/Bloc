@@ -1,4 +1,4 @@
-package com.example.cole.bloc3;
+package com.example.cole.BLOC;
 
 /**
  * Created by Cole on 10/24/17.
@@ -13,6 +13,11 @@ public class Package {
         this.title = title;
         this.description = description;
         this.imageID = imageID;
+    }
+
+    @Override
+    public String toString() {
+        return "" + title;
     }
 
     public String getTitle() {
