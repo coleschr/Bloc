@@ -34,9 +34,20 @@
                 app:srcCompat="@drawable/company_pic" />
 
             <TextView
+                android:id="@+id/textView_title_company_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/side_margin"
+                android:layout_marginRight="@dimen/side_margin"
+                android:layout_marginTop="@dimen/btwn_space"
+                android:text="TextView"
+                android:textSize="@dimen/subtitle_size" />
+
+            <TextView
                 android:id="@+id/textView_company_desc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/bottom_scrollview_margin"
                 android:layout_marginLeft="@dimen/side_margin"
                 android:layout_marginRight="@dimen/side_margin"
                 android:layout_marginTop="@dimen/btwn_space"
@@ -44,15 +55,16 @@
                 android:textSize="@dimen/text_size" />
 
             <TextView
-                android:id="@+id/textView_csr"
+                android:id="@+id/textView_title_csr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/bottom_scrollview_margin"
                 android:layout_marginLeft="@dimen/side_margin"
                 android:layout_marginRight="@dimen/side_margin"
                 android:layout_marginTop="@dimen/btwn_space"
                 android:text="TextView"
-                android:textSize="@dimen/text_size"
-                android:layout_marginBottom="@dimen/bottom_scrollview_margin"/>
+                android:textSize="@dimen/text_size" />
+
         </LinearLayout>
     </ScrollView>
 

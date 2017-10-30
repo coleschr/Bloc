@@ -5,5 +5,7 @@
     <string name="contact_title">Contact Us</string>
     <string name="explore_title">Explore</string>
     <string name="product_title">Products</string>
-    <string name="desc_company">Company Description: At Bloc we focus on giving our customers a creative alternative to modern day furniture. We offer large building blocks that can be used to make customizable modular furniture. Customers are given the option to buy three different sized packages. Our consumers are encouraged to exercise their creative ability by constantly constructing and modifying their designs. Bloc exhibits social responsibility through our partnership with Habitat for Humanity.</string>
+    <string name="desc_company">At Bloc, we focus on giving our customers a creative alternative to modern day furniture. We offer large building blocks that can be used to make customizable modular furniture. Customers are able to buy four differently sized packages: small, medium, large, or mega. Our consumers are encouraged to exercise their creative ability by constantly modifying their designs. Whether a person is designing or redesigning their space, we provide the tools to do so. In addition, Bloc exhibits social responsibility through our partnership with Habitat for Humanity. Through this charity, Bloc is able to assist those whose lives have been ravaged by natural disasters or poverty by rebuilding their lives through helping them rebuild their homes.
+</string>
+    <string name="title_company_desc">Company Description</string>
 </resources>
