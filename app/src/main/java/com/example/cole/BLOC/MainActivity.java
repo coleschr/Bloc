@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 currentFragment = new FragmentProducts();
                 switchToNewScreen();
                 changeIconColors(2);
-
+                setUpArrayAdapter();
                 break;
             case contact:
                 currentFragment = new FragmentContact();
@@ -95,6 +95,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 changeIconColors(4);
                 break;
         }
+    }
+
+    private void setUpArrayAdapter() {
+
     }
 
     private void switchToNewScreen() {
