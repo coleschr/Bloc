@@ -7,11 +7,12 @@ package com.example.cole.BLOC;
 public class Package {
     //may need to add more
     private String title, description;
-    private int imageID;
+    private int imageID, cost;
 
-    public Package(String title, String description, int imageID) {
+    public Package(String title, String description, int cost, int imageID) {
         this.title = title;
         this.description = description;
+        this.cost = cost;
         this.imageID = imageID;
     }
 
@@ -34,6 +35,14 @@ public class Package {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public int getCost() {
+        return cost;
+    }
+
+    public void setCost(int cost) {
+        this.cost = cost;
     }
 
     public int getImageID() {

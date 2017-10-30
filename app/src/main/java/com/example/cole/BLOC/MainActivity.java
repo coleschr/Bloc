@@ -10,8 +10,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 
-import java.util.ArrayList;
-
 import static com.example.cole.BLOC.R.id.about;
 import static com.example.cole.BLOC.R.id.contact;
 import static com.example.cole.BLOC.R.id.explore;
@@ -22,7 +20,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private int screen;
     private Fragment currentFragment;
     private ConstraintLayout layout;
-    private ArrayList<Package> packages;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,7 +79,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 currentFragment = new FragmentProducts();
                 switchToNewScreen();
                 changeIconColors(2);
-                setUpArrayAdapter();
                 break;
             case contact:
                 currentFragment = new FragmentContact();
@@ -95,10 +91,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 changeIconColors(4);
                 break;
         }
-    }
-
-    private void setUpArrayAdapter() {
-
     }
 
     private void switchToNewScreen() {
