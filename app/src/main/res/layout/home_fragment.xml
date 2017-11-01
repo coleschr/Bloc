@@ -35,6 +35,18 @@
                 android:text="TextView"
                 android:textSize="@dimen/text_size"
                 android:layout_marginBottom="@dimen/bottom_scrollview_margin"/>
+
+            <TextView
+                android:id="@+id/text_ve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/side_margin"
+                android:layout_marginRight="@dimen/side_margin"
+                android:layout_marginTop="@dimen/btwn_space"
+                android:text="TextView"
+                android:textSize="10dp"
+                android:layout_marginBottom="10dp"/>
         </LinearLayout>
     </ScrollView>
 

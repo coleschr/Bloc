@@ -13,7 +13,7 @@ import android.widget.TextView;
  */
 
 public class FragmentHome extends Fragment {
-    private TextView missionStatement;
+    private TextView missionStatement, veStatement;
     private String ms;
 
     @Nullable
@@ -22,14 +22,15 @@ public class FragmentHome extends Fragment {
         super.onCreateView(inflater, container, savedInstanceState);
         View rootView = inflater.inflate(R.layout.home_fragment, container, false);
 
-        missionStatement= (TextView) rootView.findViewById(R.id.text_ms);
         //wire any widgets -- must use rootView.findViewById
+        missionStatement = (TextView) rootView.findViewById(R.id.text_ms);
+        ms = getString(R.string.mission_statement);
 
-        ms= getString(R.string.mission_statement);
-
-        missionStatement.setText(ms);
         //get any other initial set up done
+        missionStatement.setText(ms);
 
+        veStatement = (TextView) rootView.findViewById(R.id.text_ve);
+        veStatement.setText(getString(R.string.ve_statement));
 
         //return the view that we inflated
         return rootView;
