@@ -31,8 +31,8 @@ public class FragmentAbout extends Fragment {
         //get any other initial set up done
         companyDesc.setText(R.string.desc_company);
         companyDescTitle.setText(com.example.cole.BLOC.R.string.title_company_desc);
-        csrTitle.setText("Corporate Social Responsibility");
-        csr.setText("Bloc...helps");
+        csrTitle.setText(R.string.csr_title);
+        csr.setText(R.string.csr);
 
         //return the view that we inflated
         return rootView;
