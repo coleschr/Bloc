@@ -13,7 +13,7 @@ import android.widget.TextView;
  */
 
 public class FragmentAbout extends Fragment {
-    private TextView companyDesc, csr, companyDescTitle;
+    private TextView companyDesc, companyDescTitle, csrTitle, csr;
 
     @Nullable
     @Override
@@ -24,12 +24,15 @@ public class FragmentAbout extends Fragment {
 
         //wire any widgets -- must use rootView.findViewById
         companyDesc= (TextView) rootView.findViewById(R.id.textView_company_desc);
-        csr= (TextView) rootView.findViewById(R.id.textView_title_csr);
+        csrTitle= (TextView) rootView.findViewById(R.id.textView_title_csr);
         companyDescTitle= (TextView) rootView.findViewById(R.id.textView_title_company_desc);
+        csr= (TextView) rootView.findViewById(R.id.textView_csr);
 
         //get any other initial set up done
         companyDesc.setText(R.string.desc_company);
         companyDescTitle.setText(com.example.cole.BLOC.R.string.title_company_desc);
+        csrTitle.setText("Corporate Social Responsibility");
+        csr.setText("Bloc...helps");
 
         //return the view that we inflated
         return rootView;

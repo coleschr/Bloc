@@ -6,5 +6,6 @@
     <dimen name="above_title_space">20dp</dimen>
     <dimen name="side_margin">20dp</dimen>
     <dimen name="btwn_space">40dp</dimen>
+    <dimen name="btwn_subtitle_text_space">15dp</dimen>
     <dimen name="bottom_scrollview_margin">100dp</dimen>
 </resources>
