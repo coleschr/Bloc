@@ -53,24 +53,24 @@
                 android:text="TextView"
                 android:textSize="@dimen/text_size" />
 
+            <ImageView
+                android:id="@+id/habitat_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_marginLeft="@dimen/side_margin"
+                android:layout_marginRight="@dimen/side_margin"
+                android:layout_marginTop="@dimen/btwn_space"
+                app:srcCompat="@drawable/habitat_for_humanity" />
+
             <TextView
                 android:id="@+id/textView_title_csr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/side_margin"
                 android:layout_marginRight="@dimen/side_margin"
-                android:layout_marginTop="@dimen/btwn_space"
+                android:layout_marginTop="@dimen/above_title_space"
                 android:text="TextView"
                 android:textSize="@dimen/subtitle_size" />
-
-            <ImageView
-                android:id="@+id/habitat_pic"
-                android:layout_width="wrap_content"
-                android:layout_height="201dp"
-                android:layout_marginLeft="@dimen/side_margin"
-                android:layout_marginRight="@dimen/side_margin"
-                android:layout_marginTop="@dimen/btwn_subtitle_text_space"
-                app:srcCompat="@drawable/habitat_for_humanity" />
 
             <TextView
                 android:id="@+id/textView_csr"

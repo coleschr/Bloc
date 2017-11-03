@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 
 public class FragmentContact extends Fragment {
 
+
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -21,8 +23,8 @@ public class FragmentContact extends Fragment {
 
         //wire any widgets -- must use rootView.findViewById
 
-        //get any other initial set up done
 
+        //get any other initial set up done
         //return the view that we inflated
         return rootView;
     }

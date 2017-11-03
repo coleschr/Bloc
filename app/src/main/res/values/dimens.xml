@@ -4,8 +4,10 @@
     <dimen name="subtitle_size">30sp</dimen>
     <dimen name="text_size">20sp</dimen>
     <dimen name="above_title_space">20dp</dimen>
-    <dimen name="side_margin">20dp</dimen>
+    <dimen name="side_margin">30dp</dimen>
     <dimen name="btwn_space">40dp</dimen>
     <dimen name="btwn_subtitle_text_space">15dp</dimen>
     <dimen name="bottom_scrollview_margin">100dp</dimen>
+    <dimen name="side_horiz_layout">20dp</dimen>
+    <dimen name="width_contact_buttons">60dp</dimen>
 </resources>
