@@ -11,4 +11,8 @@
     <string name="ve_statement">This is an official Virtual Enterprises International firm application for educational purposes only for 2017-2018 - \"Bloc\"</string>
     <string name="csr_title">Corporate Social Responsibility</string>
     <string name="csr">Bloc...helps</string>
+    <string name="small_package_title">Small</string>
+    <string name="medium_package_title">Medium</string>
+    <string name="large_package_title">Large</string>
+    <string name="mega_package_title">Mega</string>
 </resources>

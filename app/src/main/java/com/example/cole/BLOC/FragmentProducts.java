@@ -39,10 +39,10 @@ public class FragmentProducts extends Fragment {
 
     private void createPackages() {
         packages = new ArrayList<>();
-        packages.add(new Package("Small", "15 Blocs, 10 Toppers", 150, 0));
-        packages.add(new Package("Medium", "30 Blocs, 10 Squares, 15 Toppers", 350, 0));
-        packages.add(new Package("Large", "50 Blocs, 30 Squares, 25 Toppers", 650, 0));
-        packages.add(new Package("Mega", "150 Blocs, 50 Squares, 40 Toppers", 1200, 0));
+        packages.add(new Package(getString(R.string.small_package_title), "15 Blocs, 10 Toppers", 150, 0));
+        packages.add(new Package(getString(R.string.medium_package_title), "30 Blocs, 10 Squares, 15 Toppers", 350, 0));
+        packages.add(new Package(getString(R.string.large_package_title), "50 Blocs, 30 Squares, 25 Toppers", 650, 0));
+        packages.add(new Package(getString(R.string.mega_package_title), "150 Blocs, 50 Squares, 40 Toppers", 1200, 0));
     }
 
     private void setUpArrayAdapter() {
