@@ -20,4 +20,5 @@
     <string name="phoneNum_contact">(626) 441-5820</string>
     <string name="email_contact">bloc.ca@veinternational.org</string>
     <string name="website_address">vei-bloc.com</string>
+    <string name="purchase">Purchase</string>
 </resources>

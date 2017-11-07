@@ -12,6 +12,7 @@
         android:layout_gravity="center_horizontal"
         android:textSize="@dimen/title_size"
         android:textColor="@color/colorTitle"
+        android:fontFamily="@font/roboto_regular"
         android:layout_marginTop="@dimen/above_title_space"
         android:text="@string/contact_title" />
 
@@ -37,6 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/side_horiz_layout"
             android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
             android:text="@string/phoneNum_contact"
             android:textSize="@dimen/text_size"
             tools:text="@string/phoneNum_contact" />
@@ -64,6 +66,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/side_horiz_layout"
             android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
             android:text="@string/email_contact"
             android:textSize="@dimen/text_size"
             tools:text="@string/email_contact" />
@@ -91,6 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/side_horiz_layout"
             android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
             android:text="@string/website_address"
             android:textSize="@dimen/text_size"
             tools:text="@string/website_address" />
