@@ -9,5 +9,5 @@
     <dimen name="btwn_subtitle_text_space">15dp</dimen>
     <dimen name="bottom_scrollview_margin">100dp</dimen>
     <dimen name="side_horiz_layout">20dp</dimen>
-    <dimen name="width_contact_buttons">60dp</dimen>
+    <dimen name="width_contact_buttons">40dp</dimen>
 </resources>

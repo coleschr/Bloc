@@ -16,39 +16,27 @@
         android:layout_marginTop="@dimen/above_title_space"
         android:text="@string/contact_title" />
 
-    <LinearLayout
+
+    <TextView
+        android:id="@+id/textView_phone_num"
         android:layout_width="wrap_content"
-        android:layout_marginTop="@dimen/btwn_space"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/side_margin"
-        android:orientation="horizontal">
+        android:layout_marginStart="@dimen/side_margin"
+        android:drawableLeft="@drawable/ic_phone_black_24dp"
+        android:drawablePadding="@dimen/width_contact_buttons"
+        android:drawableTint="@color/colorNotClicked"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/phoneNum_contact"
+        android:textSize="@dimen/text_size"
+        tools:text="@string/phoneNum_contact" />
 
-        <ImageButton
-            android:id="@+id/imageButton_phone"
-            android:layout_width="@dimen/width_contact_buttons"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/colorBackground"
-            android:tint="@color/colorNotClicked"
-            app:srcCompat="@drawable/ic_phone_black_24dp" />
-
-        <TextView
-            android:id="@+id/textView_phone_num"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/side_horiz_layout"
-            android:layout_weight="1"
-            android:fontFamily="@font/roboto_regular"
-            android:text="@string/phoneNum_contact"
-            android:textSize="@dimen/text_size"
-            tools:text="@string/phoneNum_contact" />
-    </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout_email"
         android:layout_width="wrap_content"
-        android:layout_marginTop="@dimen/btwn_space"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/side_margin"
+        android:layout_marginTop="@dimen/btwn_space"
         android:orientation="horizontal">
 
         <ImageButton
@@ -73,10 +61,11 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout_website"
         android:layout_width="wrap_content"
-        android:layout_marginTop="@dimen/btwn_space"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/side_margin"
+        android:layout_marginTop="@dimen/btwn_space"
         android:orientation="horizontal">
 
         <ImageButton
