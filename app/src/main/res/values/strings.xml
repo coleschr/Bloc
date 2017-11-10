@@ -4,12 +4,12 @@
     <string name="about_title">About</string>
     <string name="contact_title">Contact Us</string>
     <string name="explore_title">Explore</string>
-    <string name="product_title">Packages</string>
+    <string name="product_title">Components</string>
     <string name="desc_company">At Bloc, we focus on giving our customers a creative alternative to modern day furniture. Our customizable modular furniture consists of varying sizes of blocks made from recycled plastic. Our consumers are encouraged to exercise their creative ability by constantly modifying their designs. Whether a person is designing or redesigning their space, we provide the tools to do so. We also exhibit our social responsibility through our partnership with Habitat for Humanity. Bloc is able to assist those whose lives have been affected by natural disasters or poverty by rebuilding their lives through rebuilding their homes.
 
 </string>
     <string name="title_company_desc">Company Description</string>
-    <string name="ve_statement">This is an official Virtual Enterprises International firm application for educational purposes only for 2017-2018 - \"Bloc\"</string>
+    <string name="ve_statement">This is an official Virtual Enterprises International firm application for educational purposes only for 2017–2018 - \"Bloc\"</string>
     <string name="csr_title">Corporate Social Responsibility</string>
     <string name="csr">Habitat for Humanity is a nonprofit organization dedicated to creating “a world where everyone has a decent place to live.” They strive to provide healing for people in the community and all around the world by helping to build or improve a place they call home. Habitat offers affordable homeownership to families burdened by unpredictable rent, overcrowded conditions, and lack of access to land. The effect of this homeownership is life changing for families. Habitat’s objectives coincide well with Bloc’s desire to empower individuals in redefining what it means to start over. Bloc supports Habitat for Humanity through monthly package donations and by sending employees to volunteer at the Habitat for Humanity ReStores and at construction sites each weekend.
 </string>
@@ -17,8 +17,9 @@
     <string name="medium_package_title">Medium</string>
     <string name="large_package_title">Large</string>
     <string name="mega_package_title">Mega</string>
-    <string name="phoneNum_contact">(626) 441-5820</string>
+    <string name="phoneNum_contact">(626) 441–5820</string>
     <string name="email_contact">bloc.ca@veinternational.org</string>
     <string name="website_address">vei-bloc.com</string>
     <string name="purchase">Purchase</string>
+    <string name="packages_title">Packages</string>
 </resources>

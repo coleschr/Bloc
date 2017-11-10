@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView_medium_title"
+        android:id="@+id/textView_product_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -15,12 +16,123 @@
         android:layout_marginTop="@dimen/above_title_space"
         android:text="@string/product_title" />
 
-    <ListView
-        android:id="@+id/product_list_view"
-        android:layout_width="match_parent"
+    <GridLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/btwn_space">
+        android:layout_gravity="center_horizontal">
 
-    </ListView>
+        <ImageView
+            android:id="@+id/imageView_bloc"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_column="0"
+            android:layout_row="0"
+            app:srcCompat="@drawable/block"
+            tools:ignore="ContentDescription"/>
+
+        <ImageView
+            android:id="@+id/imageView_square"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_column="1"
+            android:layout_row="0"
+            app:srcCompat="@drawable/square"
+            tools:ignore="ContentDescription"/>
+
+        <ImageView
+            android:id="@+id/imageView_topper"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_column="2"
+            android:layout_row="0"
+            app:srcCompat="@drawable/topper"
+            tools:ignore="ContentDescription"/>
+
+        <TextView
+            android:id="@+id/textView_bloc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:text="Block" />
+
+        <TextView
+            android:id="@+id/textView_square"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:text="Square" />
+
+        <TextView
+            android:id="@+id/textView_topper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_column="2"
+            android:layout_row="1"
+            android:text="Topper" />
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/textView_packages_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/title_size"
+        android:textColor="@color/colorTitle"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_marginTop="@dimen/above_title_space"
+        android:text="@string/packages_title" />
+
+    <TextView
+        android:id="@+id/textView_small_package"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/subtitle_size"
+        android:textColor="@color/colorNotClicked"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_marginTop="@dimen/above_title_space"
+        android:text="@string/small_package_title" />
+
+    <TextView
+        android:id="@+id/textView_medium_package"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/subtitle_size"
+        android:textColor="@color/colorNotClicked"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_marginTop="@dimen/above_title_space"
+        android:text="@string/medium_package_title" />
+
+    <TextView
+        android:id="@+id/textView_large_package"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/subtitle_size"
+        android:textColor="@color/colorNotClicked"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_marginTop="@dimen/above_title_space"
+        android:text="@string/large_package_title" />
+
+    <TextView
+        android:id="@+id/textView_mega_package"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/subtitle_size"
+        android:textColor="@color/colorNotClicked"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_marginTop="@dimen/above_title_space"
+        android:text="@string/mega_package_title" />
 
 </LinearLayout>
