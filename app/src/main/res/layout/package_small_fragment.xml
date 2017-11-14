@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -15,14 +16,90 @@
         android:textColor="@color/colorTitle"
         android:textSize="@dimen/title_size" />
 
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="@dimen/btwn_subtitle_text_space">
+
+        <TextView
+            android:id="@+id/textView_small_blocks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/text_size"
+            android:text="15 Blocks" />
+
+        <TextView
+            android:id="@+id/textView_small_squares"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/btwn_subtitle_text_space"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/text_size"
+            android:text="10 Squares"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/side_margin"
+            android:layout_marginVertical="@dimen/btwn_subtitle_text_space"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/side_margin">
+
+            <ImageView
+                android:id="@+id/imageView_white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/white"
+                android:layout_marginTop="@dimen/side_margin"
+                android:background="@color/colorAccent"
+                android:padding="3dp"/>
+
+            <ImageView
+                android:id="@+id/imageView_grey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/grey"
+                android:layout_marginTop="@dimen/side_margin"
+                android:padding="3dp"/>
+
+            <ImageView
+                android:id="@+id/imageView_fun"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/fun"
+                android:layout_marginVertical="@dimen/side_margin"
+                android:padding="3dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
     <Button
         android:id="@+id/button_small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:textSize="@dimen/subtitle_size"
-        android:backgroundTint="@color/colorPrimary"
+        android:backgroundTint="@color/colorTitle"
+        android:text="@string/purchase"
         android:textColor="@color/colorBackground"
-        android:text="@string/purchase" />
+        android:layout_marginTop="@dimen/btwn_subtitle_text_space"
+        android:textSize="@dimen/subtitle_size" />
 
 </LinearLayout>

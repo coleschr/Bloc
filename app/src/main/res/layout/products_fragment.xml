@@ -57,7 +57,7 @@
             android:layout_column="0"
             android:layout_row="1"
             android:textColor="@color/colorText"
-            android:text="Block" />
+            android:text="Blocks" />
 
         <TextView
             android:id="@+id/textView_square"
@@ -68,7 +68,7 @@
             android:layout_column="1"
             android:layout_row="1"
             android:textColor="@color/colorText"
-            android:text="Square" />
+            android:text="Squares" />
 
         <TextView
             android:id="@+id/textView_topper"
@@ -79,7 +79,7 @@
             android:layout_column="2"
             android:layout_row="1"
             android:textColor="@color/colorText"
-            android:text="Topper" />
+            android:text="Toppers" />
 
     </GridLayout>
 
@@ -111,7 +111,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:textSize="@dimen/subtitle_size"
-        android:textColor="@color/colorNotClicked"
+        android:textColor="@color/colorStress"
         android:fontFamily="@font/roboto_regular"
         android:layout_marginTop="@dimen/above_title_space"
         android:text="@string/medium_package_title" />
