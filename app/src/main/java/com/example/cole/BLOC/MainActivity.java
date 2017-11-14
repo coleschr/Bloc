@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             screen = newScreen;
             icon[screen].setColorFilter(getColor(R.color.colorAccent));
         } else {
-            icon[screen].setColorFilter(Color.rgb(96, 125, 139)); //colorNotClicked
+            icon[screen].setColorFilter(Color.rgb(255, 255, 255)); //colorNotClicked
             screen = newScreen;
             icon[screen].setColorFilter(Color.rgb(245, 124, 0)); //colorAccent
         }

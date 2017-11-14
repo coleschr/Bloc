@@ -25,6 +25,7 @@
         android:drawableLeft="@drawable/ic_phone_black_24dp"
         android:drawablePadding="@dimen/width_contact_buttons"
         android:drawableTint="@color/colorNotClicked"
+        android:textColor="@color/colorText"
         android:fontFamily="@font/roboto_regular"
         android:text="@string/phoneNum_contact"
         android:textSize="@dimen/text_size"
@@ -56,6 +57,7 @@
             android:layout_weight="1"
             android:fontFamily="@font/roboto_regular"
             android:text="@string/email_contact"
+            android:textColor="@color/colorText"
             android:textSize="@dimen/text_size"
             tools:text="@string/email_contact" />
     </LinearLayout>
@@ -84,6 +86,7 @@
             android:layout_marginLeft="@dimen/side_horiz_layout"
             android:layout_weight="1"
             android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/colorText"
             android:text="@string/website_address"
             android:textSize="@dimen/text_size"
             tools:text="@string/website_address" />

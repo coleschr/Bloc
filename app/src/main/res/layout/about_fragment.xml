@@ -43,6 +43,7 @@
                 android:fontFamily="@font/roboto_regular"
                 android:layout_marginTop="@dimen/btwn_space"
                 android:text="TextView"
+                android:textColor="@color/colorText"
                 android:textSize="@dimen/subtitle_size" />
 
             <TextView
@@ -53,6 +54,7 @@
                 android:layout_marginRight="@dimen/side_margin"
                 android:layout_marginTop="@dimen/btwn_subtitle_text_space"
                 android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/colorText"
                 android:text="TextView"
                 android:textSize="@dimen/text_size" />
 
@@ -73,6 +75,7 @@
                 android:fontFamily="@font/roboto_regular"
                 android:layout_marginRight="@dimen/side_margin"
                 android:layout_marginTop="@dimen/above_title_space"
+                android:textColor="@color/colorText"
                 android:text="TextView"
                 android:textSize="@dimen/subtitle_size" />
 
@@ -85,6 +88,7 @@
                 android:fontFamily="@font/roboto_regular"
                 android:layout_marginRight="@dimen/side_margin"
                 android:layout_marginTop="@dimen/btwn_subtitle_text_space"
+                android:textColor="@color/colorText"
                 android:text="TextView"
                 android:textSize="@dimen/text_size" />
 
