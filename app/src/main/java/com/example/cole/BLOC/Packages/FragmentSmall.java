@@ -59,33 +59,33 @@ public class FragmentSmall extends Fragment implements View.OnClickListener {
 
     private void wireWidgets(View rootView) {
         smallImage = (ImageView) rootView.findViewById(R.id.imageView_small);
-        grey = (ImageView) rootView.findViewById(R.id.imageView_grey);
-        white = (ImageView) rootView.findViewById(R.id.imageView_white);
-        fun = (ImageView) rootView.findViewById(R.id.imageView_fun);
+        grey = (ImageView) rootView.findViewById(R.id.imageView_small_grey);
+        white = (ImageView) rootView.findViewById(R.id.imageView_small_white);
+        fun = (ImageView) rootView.findViewById(R.id.imageView_small_fun);
         purchase = (Button) rootView.findViewById(R.id.button_small);
-        left = (ImageView) rootView.findViewById(R.id.imageView_left);
-        right = (ImageView) rootView.findViewById(R.id.imageView_right);
+        left = (ImageView) rootView.findViewById(R.id.imageView_small_left);
+        right = (ImageView) rootView.findViewById(R.id.imageView_small_right);
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.imageView_grey:
+            case R.id.imageView_small_grey:
                 grey.setBackgroundColor(Color.rgb(245, 124, 0));
                 white.setBackgroundColor(Color.argb(0, 0, 0, 0));
                 fun.setBackgroundColor(Color.argb(0, 0, 0, 0));
                 break;
-            case R.id.imageView_white:
+            case R.id.imageView_small_white:
                 white.setBackgroundColor(Color.rgb(245, 124, 0));
                 grey.setBackgroundColor(Color.argb(0, 0, 0, 0));
                 fun.setBackgroundColor(Color.argb(0, 0, 0, 0));
                 break;
-            case R.id.imageView_fun:
+            case R.id.imageView_small_fun:
                 fun.setBackgroundColor(Color.rgb(245, 124, 0));
                 grey.setBackgroundColor(Color.argb(0, 0, 0, 0));
                 white.setBackgroundColor(Color.argb(0, 0, 0, 0));
                 break;
-            case R.id.imageView_left:
+            case R.id.imageView_small_left:
                 if(currentImage != 0) {
                     smallImage.setImageResource(image[currentImage-1]);
                     currentImage--;
@@ -95,7 +95,7 @@ public class FragmentSmall extends Fragment implements View.OnClickListener {
                     currentImage = image.length-1;
                 }
                 break;
-            case R.id.imageView_right:
+            case R.id.imageView_small_right:
                 if(currentImage != image.length-1) {
                     smallImage.setImageResource(image[currentImage+1]);
                     currentImage++;
