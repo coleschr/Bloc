@@ -25,7 +25,6 @@
         android:layout_marginVertical="@dimen/btwn_subtitle_text_space">
 
         <TextView
-            android:id="@+id/textView_small_blocks"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_regular"
@@ -34,14 +33,13 @@
             android:text="15 Blocks" />
 
         <TextView
-            android:id="@+id/textView_small_squares"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingStart="@dimen/btwn_subtitle_text_space"
             android:fontFamily="@font/roboto_regular"
             android:textColor="@color/colorText"
             android:textSize="@dimen/text_size"
-            android:text="10 Squares"/>
+            android:text="10 Toppers"/>
 
     </LinearLayout>
 
@@ -116,6 +114,7 @@
         android:layout_gravity="center_horizontal"
         android:backgroundTint="@color/colorTitle"
         android:text="@string/purchase"
+        android:fontFamily="@font/roboto_regular"
         android:textColor="@color/colorBackground"
         android:layout_marginTop="@dimen/btwn_subtitle_text_space"
         android:textSize="@dimen/subtitle_size" />
