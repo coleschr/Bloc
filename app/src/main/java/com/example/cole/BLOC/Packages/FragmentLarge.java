@@ -105,6 +105,8 @@ public class FragmentLarge extends Fragment implements View.OnClickListener {
                     currentImage = 0;
                 }
                 break;
+            case R.id.button_large:
+                openWebPage("https://portal.veinternational.org/buybuttons/us021804/btn/large-package-3/");
         }
     }
 

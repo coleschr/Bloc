@@ -105,6 +105,8 @@ public class FragmentSmall extends Fragment implements View.OnClickListener {
                     currentImage = 0;
                 }
                 break;
+            case R.id.button_small:
+                openWebPage("https://portal.veinternational.org/buybuttons/us021804/btn/small-package-1/");
         }
     }
 
