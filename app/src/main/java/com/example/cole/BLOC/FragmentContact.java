@@ -8,13 +8,13 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+import android.widget.TextView;
 
 /**
  * Created by Cole on 10/16/17.
  */
 
-public class FragmentContact extends Fragment implements LinearLayout.OnClickListener{
+public class FragmentContact extends Fragment implements View.OnClickListener{
 
 
     @Nullable
@@ -23,7 +23,7 @@ public class FragmentContact extends Fragment implements LinearLayout.OnClickLis
         super.onCreateView(inflater, container, savedInstanceState);
         View rootView = inflater.inflate(R.layout.contact_fragment, container, false);
 
-        LinearLayout website= (LinearLayout) rootView.findViewById(R.id.linearLayout_website);
+        TextView website= (TextView) rootView.findViewById(R.id.textView_website);
         //wire any widgets -- must use rootView.findViewById
         website.setOnClickListener(this);
 
@@ -42,7 +42,12 @@ public class FragmentContact extends Fragment implements LinearLayout.OnClickLis
 
     @Override
     public void onClick(View view) {
-        openWebPage("http://vei-bloc.com");
+        switch (view.getId()){
+                case R.id.textView_website:
+                    openWebPage("http://vei-bloc.com");
+                    break;
+        }
+
 
     }
 

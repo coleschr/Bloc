@@ -10,4 +10,5 @@
     <dimen name="bottom_scrollview_margin">100dp</dimen>
     <dimen name="side_horiz_layout">20dp</dimen>
     <dimen name="width_contact_buttons">40dp</dimen>
+    <dimen name="second_line_start_margin">94dp</dimen>
 </resources>

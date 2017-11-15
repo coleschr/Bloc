@@ -22,74 +22,89 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/side_margin"
+        android:layout_marginTop="@dimen/above_title_space"
         android:drawableLeft="@drawable/ic_phone_black_24dp"
         android:drawablePadding="@dimen/width_contact_buttons"
-        android:drawableTint="@color/colorNotClicked"
+        android:drawableTint="@color/colorText"
+        android:drawableTintMode="src_over"
         android:textColor="@color/colorText"
         android:fontFamily="@font/roboto_regular"
         android:text="@string/phoneNum_contact"
         android:textSize="@dimen/text_size"
         tools:text="@string/phoneNum_contact" />
 
-
-    <LinearLayout
-        android:id="@+id/linearLayout_email"
+    <TextView
+        android:id="@+id/textView_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/side_margin"
-        android:layout_marginTop="@dimen/btwn_space"
-        android:orientation="horizontal">
+        android:layout_marginStart="@dimen/side_margin"
+        android:layout_marginTop="@dimen/btwn_subtitle_text_space"
+        android:drawableLeft="@drawable/ic_email_black_24dp"
+        android:drawablePadding="@dimen/width_contact_buttons"
+        android:drawableTint="@color/colorNotClicked"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/email_contact"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/text_size"
+        tools:text="@string/email_contact" />
 
-        <ImageButton
-            android:id="@+id/imageButton_email"
-            android:layout_width="@dimen/width_contact_buttons"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/colorBackground"
-            android:tint="@color/colorNotClicked"
-            app:srcCompat="@drawable/ic_email_black_24dp" />
-
-        <TextView
-            android:id="@+id/textView_email_address"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/side_horiz_layout"
-            android:layout_weight="1"
-            android:fontFamily="@font/roboto_regular"
-            android:text="@string/email_contact"
-            android:textColor="@color/colorText"
-            android:textSize="@dimen/text_size"
-            tools:text="@string/email_contact" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout_website"
+    <TextView
+        android:id="@+id/textView_website"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/side_margin"
-        android:layout_marginTop="@dimen/btwn_space"
-        android:orientation="horizontal">
+        android:layout_marginStart="@dimen/side_margin"
+        android:layout_marginTop="@dimen/btwn_subtitle_text_space"
+        android:drawableLeft="@drawable/ic_laptop_black_24dp"
+        android:drawablePadding="@dimen/width_contact_buttons"
+        android:drawableTint="@color/colorNotClicked"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/website_address"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/text_size"
+        tools:text="@string/website_address" />
 
-        <ImageButton
-            android:id="@+id/imageButton_website"
-            android:layout_width="@dimen/width_contact_buttons"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/colorBackground"
-            android:tint="@color/colorNotClicked"
-            app:srcCompat="@drawable/ic_laptop_black_24dp" />
+    <TextView
+        android:id="@+id/textView_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/side_margin"
+        android:layout_marginTop="@dimen/btwn_subtitle_text_space"
+        android:drawableLeft="@drawable/ic_location_on_black_24dp"
+        android:drawablePadding="@dimen/width_contact_buttons"
+        android:drawableTint="@color/colorNotClicked"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/address1"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/text_size"
+        android:maxLines="10"
+        tools:text="@string/address1" />
+    <TextView
+        android:id="@+id/textView_location1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/second_line_start_margin"
+        android:drawableTint="@color/colorNotClicked"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/address2"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/text_size"
+        android:maxLines="10"
+        tools:text="@string/address2" />
 
-        <TextView
-            android:id="@+id/textView_website_address"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/side_horiz_layout"
-            android:layout_weight="1"
-            android:fontFamily="@font/roboto_regular"
-            android:textColor="@color/colorText"
-            android:text="@string/website_address"
-            android:textSize="@dimen/text_size"
-            tools:text="@string/website_address" />
-    </LinearLayout>
+    <TextView
+        android:id="@+id/textView_twitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/side_margin"
+        android:layout_marginTop="@dimen/btwn_subtitle_text_space"
+        android:drawableLeft="@drawable/twitter_icon"
+        android:drawablePadding="@dimen/width_contact_buttons"
+        android:drawableTint="@color/colorNotClicked"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/twitter"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/text_size"
+        tools:text="@string/twitter" />
+
 
 </LinearLayout>

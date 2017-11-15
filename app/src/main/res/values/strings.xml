@@ -22,4 +22,7 @@
     <string name="website_address">vei-bloc.com</string>
     <string name="purchase">Purchase</string>
     <string name="packages_title">Packages</string>
+    <string name="address1">1401 Fremont Avenue</string>
+    <string name="address2">South Pasadena, CA 91030</string>
+    <string name="twitter">@vei_BLOC</string>
 </resources>
