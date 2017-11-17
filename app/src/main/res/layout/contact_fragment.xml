@@ -97,7 +97,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/side_margin"
         android:layout_marginTop="@dimen/btwn_subtitle_text_space"
-        android:drawableLeft="@drawable/twitter_icon"
+        android:drawableLeft="@drawable/twitter_icon2"
         android:drawablePadding="@dimen/width_contact_buttons"
         android:drawableTint="@color/colorNotClicked"
         android:fontFamily="@font/roboto_regular"
@@ -105,6 +105,36 @@
         android:textColor="@color/colorText"
         android:textSize="@dimen/text_size"
         tools:text="@string/twitter" />
+
+    <TextView
+        android:id="@+id/textView_instagram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/side_margin"
+        android:layout_marginTop="@dimen/btwn_subtitle_text_space"
+        android:drawableLeft="@drawable/instagram_logo"
+        android:drawablePadding="@dimen/width_contact_buttons"
+        android:drawableTint="@color/colorNotClicked"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/instagram_id"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/text_size"
+        tools:text="@string/instagram_id" />
+
+    <TextView
+        android:id="@+id/textView_facebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/side_margin"
+        android:layout_marginTop="@dimen/btwn_subtitle_text_space"
+        android:drawableLeft="@drawable/facebook_logo"
+        android:drawablePadding="@dimen/width_contact_buttons"
+        android:drawableTint="@color/colorNotClicked"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/facebook_id"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/text_size"
+        tools:text="@string/facebook_id" />
 
 
 </LinearLayout>
