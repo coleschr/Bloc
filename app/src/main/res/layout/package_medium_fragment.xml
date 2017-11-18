@@ -38,39 +38,16 @@
             app:layout_constraintStart_toStartOf="parent" />
     </android.support.constraint.ConstraintLayout>
 
-    <LinearLayout
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_gravity="center_horizontal"
-        android:layout_marginVertical="@dimen/btwn_subtitle_text_space">
+        android:layout_marginVertical="@dimen/btwn_subtitle_text_space"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/text_size"
+        android:text="30 Blocks   10 Squares   15 Toppers" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_regular"
-            android:textColor="@color/colorText"
-            android:textSize="@dimen/text_size"
-            android:text="30 Blocks" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/btwn_subtitle_text_space"
-            android:fontFamily="@font/roboto_regular"
-            android:textColor="@color/colorText"
-            android:textSize="@dimen/text_size"
-            android:text="10 Squares"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_regular"
-            android:textColor="@color/colorText"
-            android:textSize="@dimen/text_size"
-            android:text="15 Toppers"/>
-
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

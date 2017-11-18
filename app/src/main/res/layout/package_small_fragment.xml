@@ -39,31 +39,15 @@
             app:layout_constraintStart_toStartOf="parent" />
     </android.support.constraint.ConstraintLayout>
 
-    <LinearLayout
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_gravity="center_horizontal"
-        android:layout_marginVertical="@dimen/btwn_subtitle_text_space">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_regular"
-            android:textColor="@color/colorText"
-            android:textSize="@dimen/text_size"
-            android:text="15 Blocks" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/btwn_subtitle_text_space"
-            android:fontFamily="@font/roboto_regular"
-            android:textColor="@color/colorText"
-            android:textSize="@dimen/text_size"
-            android:text="10 Toppers"/>
-
-    </LinearLayout>
+        android:layout_marginVertical="@dimen/btwn_subtitle_text_space"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/text_size"
+        android:text="15 Blocks   10 Toppers" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -106,7 +90,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/white"
-                android:layout_marginTop="@dimen/side_margin"
+                android:layout_marginTop="@dimen/above_title_space"
                 android:background="@color/colorAccent"
                 android:padding="3dp"/>
 
