@@ -6,12 +6,14 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.example.cole.BLOC.FragmentProducts;
 import com.example.cole.BLOC.R;
 
 /**
@@ -19,7 +21,7 @@ import com.example.cole.BLOC.R;
  */
 
 public class FragmentMedium extends Fragment implements View.OnClickListener {
-    private ImageView mediumImage, white, grey, fun, right, left;
+    private ImageView mediumImage, white, grey, fun, right, left, back;
     private Button purchase;
     private int[] image;
     private int currentImage;
@@ -54,6 +56,7 @@ public class FragmentMedium extends Fragment implements View.OnClickListener {
         purchase.setOnClickListener(this);
         left.setOnClickListener(this);
         right.setOnClickListener(this);
+        back.setOnClickListener(this);
     }
 
     private void wireWidgets(View rootView) {
@@ -64,6 +67,7 @@ public class FragmentMedium extends Fragment implements View.OnClickListener {
         purchase = (Button) rootView.findViewById(R.id.button_medium);
         left = (ImageView) rootView.findViewById(R.id.imageView_medium_left);
         right = (ImageView) rootView.findViewById(R.id.imageView_medium_right);
+        back = (ImageView) rootView.findViewById(R.id.imageView_medium_back);
     }
 
     @Override
@@ -106,6 +110,21 @@ public class FragmentMedium extends Fragment implements View.OnClickListener {
                 break;
             case R.id.button_medium:
                 openWebPage("https://portal.veinternational.org/buybuttons/us021804/btn/medium-package-2/");
+                break;
+            case R.id.imageView_medium_back:
+                Fragment currentFragment = new FragmentProducts();
+                switchToNewScreen(currentFragment);
+                break;
+        }
+    }
+
+    private void switchToNewScreen(Fragment currentFragment) {
+        //tell the fragment manager that if our current fragment isn't null, to replace whatever is there with it
+        FragmentManager fm = getFragmentManager();
+        if (currentFragment != null) {
+            fm.beginTransaction()
+                    .replace(R.id.fragment_container, currentFragment)
+                    .commit();
         }
     }
 

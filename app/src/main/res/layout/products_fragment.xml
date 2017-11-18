@@ -111,7 +111,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:textSize="@dimen/subtitle_size"
-        android:textColor="@color/colorStress"
+        android:textColor="@color/colorNotClicked"
         android:fontFamily="@font/roboto_regular"
         android:layout_marginTop="@dimen/above_title_space"
         android:text="@string/medium_package_title" />
