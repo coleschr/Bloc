@@ -65,7 +65,8 @@
                 android:layout_marginLeft="@dimen/side_margin"
                 android:layout_marginRight="@dimen/side_margin"
                 android:layout_marginTop="@dimen/btwn_space"
-                app:srcCompat="@drawable/habitat_for_humanity" />
+                app:srcCompat="@drawable/habitat_for_humanity"
+                android:background="@color/colorBackOfPic" />
 
             <TextView
                 android:id="@+id/textView_title_csr"

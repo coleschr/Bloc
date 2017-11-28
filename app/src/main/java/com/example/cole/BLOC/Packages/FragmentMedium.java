@@ -45,8 +45,10 @@ public class FragmentMedium extends Fragment implements View.OnClickListener {
     }
 
     private void initializeImages() {
-        image = new int[1];
+        image = new int[3];
         image[0] = R.drawable.medium1;
+        image[1] = R.drawable.medium2;
+        image[2] = R.drawable.medium3;
     }
 
     private void setListeners() {

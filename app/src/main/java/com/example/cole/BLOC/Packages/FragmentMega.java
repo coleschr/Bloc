@@ -45,9 +45,12 @@ public class FragmentMega extends Fragment implements View.OnClickListener {
     }
 
     private void initializeImages() {
-        image = new int[2];
+        image = new int[5];
         image[0] = R.drawable.mega1;
         image[1] = R.drawable.mega2;
+        image[2] = R.drawable.mega3;
+        image[3] = R.drawable.mega4;
+        image[4] = R.drawable.mega5;
     }
 
     private void setListeners() {

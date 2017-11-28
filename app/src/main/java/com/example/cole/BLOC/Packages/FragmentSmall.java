@@ -45,9 +45,12 @@ public class FragmentSmall extends Fragment implements View.OnClickListener {
     }
 
     private void initializeImages() {
-        image = new int[2];
+        image = new int[5];
         image[0] = R.drawable.small1;
         image[1] = R.drawable.small2;
+        image[2] = R.drawable.small3;
+        image[3] = R.drawable.small4;
+        image[4] = R.drawable.small5;
     }
 
     private void setListeners() {
