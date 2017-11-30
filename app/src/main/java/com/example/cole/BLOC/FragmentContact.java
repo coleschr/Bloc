@@ -29,6 +29,7 @@ public class FragmentContact extends Fragment implements View.OnClickListener {
         TextView facebook = (TextView) rootView.findViewById(R.id.textView_facebook);
         TextView location = (TextView) rootView.findViewById(R.id.textView_location);
         TextView email = (TextView) rootView.findViewById(R.id.textView_email);
+        TextView phone = (TextView) rootView.findViewById(R.id.textView_phone_num);
 
         //wire any widgets -- must use rootView.findViewById
         website.setOnClickListener(this);
@@ -37,6 +38,7 @@ public class FragmentContact extends Fragment implements View.OnClickListener {
         facebook.setOnClickListener(this);
         location.setOnClickListener(this);
         email.setOnClickListener(this);
+        phone.setOnClickListener(this);
 
         //get any other initial set up done
         //return the view that we inflated
@@ -66,10 +68,20 @@ public class FragmentContact extends Fragment implements View.OnClickListener {
         intent.putExtra(Intent.EXTRA_EMAIL, address);
         intent.putExtra(Intent.EXTRA_SUBJECT, subject);
         if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
+            //intent.setPackage("com.google.android.apps.email");
+            //startActivity(intent);
             startActivity(intent);
         }
     }
-//the email doesn't work yet
+
+    public void dialPhoneNumber(String phoneNumber) {
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        intent.setData(Uri.parse("tel:" + phoneNumber));
+        if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
+            startActivity(intent);
+        }
+    }
+
 
 
     @Override
@@ -79,7 +91,7 @@ public class FragmentContact extends Fragment implements View.OnClickListener {
                 openWebPage("http://vei-bloc.com");
                 break;
             case R.id.textView_email:
-                composeEmail("bloc.ca@veinternational.org", "Concerned customer");
+                composeEmail("bloc.ca@veinternational.org", "Concerned Customer");
                 break;
             case R.id.textView_location:
                 openMap("geo:0,0?q=1401 Fremont Avenue, South+Pasadena, California");
@@ -92,6 +104,9 @@ public class FragmentContact extends Fragment implements View.OnClickListener {
                 break;
             case R.id.textView_facebook:
                 openWebPage("https://www.facebook.com/vei.bloc");
+                break;
+            case R.id.textView_phone_num:
+                dialPhoneNumber("(626)441-5820");
                 break;
 
         }
