@@ -7,8 +7,10 @@ import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import static com.example.cole.BLOC.R.id.about;
 import static com.example.cole.BLOC.R.id.contact;
@@ -20,7 +22,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private int screen;
     private Fragment currentFragment;
     private ConstraintLayout layout;
-
+    private float x1, x2;
+    //to implement swipe views
+    //https://developer.android.com/training/implementing-navigation/lateral.html#horizontal-paging
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         wireWidgets();
         setOnClickListeners();
         setUpHomeScreen();
+        //this.requestWindowFeature(Window.FEATURE_NO_TITLE);
     }
 
     private void setUpHomeScreen() {
@@ -113,5 +118,83 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             screen = newScreen;
             icon[screen].setColorFilter(Color.rgb(245, 124, 0)); //colorAccent
         }
+    }
+
+    public boolean onTouchEvent(MotionEvent touchEvent)
+    {
+        switch (touchEvent.getAction())
+        {
+            case MotionEvent.ACTION_DOWN:
+            {
+                x1 = touchEvent.getX();
+                break;
+            }
+            case MotionEvent.ACTION_UP:
+            {
+                x2 = touchEvent.getX();
+
+                if(x1 > x2)
+                {
+                    Toast.makeText(this, "Right to Left Swap performed", Toast.LENGTH_SHORT).show();
+                    switch (screen)
+                    {
+
+                        case 0:
+                            currentFragment = new FragmentAbout();
+                            changeIconColors(1);
+                            break;
+                        case 1:
+                            currentFragment = new FragmentProducts();
+                            changeIconColors(2);
+                            break;
+                        case 2:
+                            currentFragment = new FragmentContact();
+                            changeIconColors(3);
+                            break;
+                        case 3:
+                            currentFragment = new FragmentExplore();
+                            changeIconColors(4);
+                            break;
+                        default:
+                            break;
+
+
+
+                    }
+                }
+
+                if(x1 < x2)
+                {
+                    Toast.makeText(this, "Left to Right Swap performed", Toast.LENGTH_SHORT).show();
+                    switch (screen)
+                    {
+                        case 1:
+                            currentFragment = new FragmentHome();
+                            changeIconColors(0);
+                            break;
+                        case 2:
+                            currentFragment = new FragmentAbout();
+                            changeIconColors(1);
+                            break;
+                        case 3:
+                            currentFragment = new FragmentProducts();
+                            changeIconColors(2);
+                            break;
+                        case 4:
+                            currentFragment = new FragmentContact();
+                            changeIconColors(3);
+                            break;
+                        default:
+                            break;
+
+                    }
+
+                }
+
+                switchToNewScreen();
+                break;
+            }
+        }
+        return false;
     }
 }
