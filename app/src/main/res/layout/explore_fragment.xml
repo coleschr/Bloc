@@ -15,7 +15,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView_about_title2"
+                android:id="@+id/textView_explore_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -35,120 +35,163 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_column="0"
+                    android:layout_marginBottom="@dimen/above_title_space"
+                    android:layout_marginRight="@dimen/above_title_space"
                     android:layout_row="0"
                     app:srcCompat="@drawable/image1"
-                    android:layout_marginBottom="@dimen/above_title_space"
-                    android:layout_marginRight="@dimen/above_title_space"
                     tools:ignore="ContentDescription" />
 
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_column="1"
+                    android:layout_marginBottom="@dimen/above_title_space"
+                    android:layout_marginRight="@dimen/above_title_space"
                     android:layout_row="0"
                     app:srcCompat="@drawable/image2"
-                    android:layout_marginBottom="@dimen/above_title_space"
-                    android:layout_marginRight="@dimen/above_title_space"
                     tools:ignore="ContentDescription" />
 
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_column="2"
+                    android:layout_marginBottom="@dimen/above_title_space"
                     android:layout_row="0"
                     app:srcCompat="@drawable/image3"
-                    android:layout_marginBottom="@dimen/above_title_space"
                     tools:ignore="ContentDescription" />
 
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_column="0"
+                    android:layout_marginBottom="@dimen/above_title_space"
+                    android:layout_marginRight="@dimen/above_title_space"
                     android:layout_row="1"
                     app:srcCompat="@drawable/image4"
-                    android:layout_marginBottom="@dimen/above_title_space"
-                    android:layout_marginRight="@dimen/above_title_space"
                     tools:ignore="ContentDescription" />
 
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_column="1"
+                    android:layout_marginBottom="@dimen/above_title_space"
+                    android:layout_marginRight="@dimen/above_title_space"
                     android:layout_row="1"
                     app:srcCompat="@drawable/image5"
-                    android:layout_marginBottom="@dimen/above_title_space"
-                    android:layout_marginRight="@dimen/above_title_space"
                     tools:ignore="ContentDescription" />
 
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_column="2"
+                    android:layout_marginBottom="@dimen/above_title_space"
                     android:layout_row="1"
                     app:srcCompat="@drawable/image6"
-                    android:layout_marginBottom="@dimen/above_title_space"
                     tools:ignore="ContentDescription" />
 
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_column="0"
+                    android:layout_marginBottom="@dimen/above_title_space"
+                    android:layout_marginRight="@dimen/above_title_space"
                     android:layout_row="2"
                     app:srcCompat="@drawable/image7"
-                    android:layout_marginBottom="@dimen/above_title_space"
-                    android:layout_marginRight="@dimen/above_title_space"
                     tools:ignore="ContentDescription" />
 
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_column="1"
-                    android:layout_row="2"
-                    app:srcCompat="@drawable/image8"
                     android:layout_marginBottom="@dimen/above_title_space"
                     android:layout_marginRight="@dimen/above_title_space"
+                    android:layout_row="2"
+                    app:srcCompat="@drawable/image8"
                     tools:ignore="ContentDescription" />
 
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_column="2"
+                    android:layout_marginBottom="@dimen/above_title_space"
                     android:layout_row="2"
                     app:srcCompat="@drawable/image9"
-                    android:layout_marginBottom="@dimen/above_title_space"
                     tools:ignore="ContentDescription" />
 
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_column="0"
-                    android:layout_row="3"
-                    app:srcCompat="@drawable/image10"
                     android:layout_marginBottom="@dimen/above_title_space"
                     android:layout_marginRight="@dimen/above_title_space"
+                    android:layout_row="3"
+                    app:srcCompat="@drawable/image10"
                     tools:ignore="ContentDescription" />
 
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_column="1"
-                    android:layout_row="3"
-                    app:srcCompat="@drawable/image11"
                     android:layout_marginBottom="@dimen/above_title_space"
                     android:layout_marginRight="@dimen/above_title_space"
+                    android:layout_row="3"
+                    app:srcCompat="@drawable/image11"
                     tools:ignore="ContentDescription" />
 
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_column="2"
+                    android:layout_marginBottom="@dimen/above_title_space"
                     android:layout_row="3"
                     app:srcCompat="@drawable/image12"
-                    android:layout_marginBottom="@dimen/above_title_space"
                     tools:ignore="ContentDescription" />
 
             </GridLayout>
+
+            <TextView
+                android:id="@+id/textView_games_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/above_title_space"
+                android:layout_marginTop="@dimen/above_title_space"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Games"
+                android:textColor="@color/colorTitle"
+                android:textSize="@dimen/title_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/btwn_space">
+
+                <Button
+                    android:id="@+id/button_stacker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="@dimen/side_margin"
+                    android:text="Bloc Stacker"
+                    android:backgroundTint="@color/colorTitle"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/colorBackground"/>
+
+                <Button
+                    android:id="@+id/button_sliding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="@dimen/side_margin"
+                    android:text="Sliding Puzzle"
+                    android:backgroundTint="@color/colorTitle"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/colorBackground"/>
+            </LinearLayout>
+
         </LinearLayout>
+
     </ScrollView>
 
 </LinearLayout>
