@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import com.example.cole.BLOC.FragmentExplore;
@@ -17,8 +18,11 @@ import com.example.cole.BLOC.R;
  */
 
 public class FragmentStacker extends Fragment implements View.OnClickListener{
-    private ImageView back;
+    private ImageView back, block0, block1, block2, block3, block4, block5;
     private Fragment currentFragment;
+    private Button place;
+    private int[][] grid;
+    private int currentRow, currentColumn;
 
     @Nullable
     @Override
@@ -31,6 +35,9 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
 
         //get any other initial set up done
         setOnClickListeners();
+        currentRow = 0;
+        currentColumn = 0;
+        grid = new int[5][6];
 
         //return the view that we inflated
         return rootView;
