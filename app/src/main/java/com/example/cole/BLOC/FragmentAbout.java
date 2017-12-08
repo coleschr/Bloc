@@ -23,10 +23,10 @@ public class FragmentAbout extends Fragment {
         View rootView = inflater.inflate(R.layout.about_fragment, container, false);
 
         //wire any widgets -- must use rootView.findViewById
-        companyDesc= (TextView) rootView.findViewById(R.id.textView_company_desc);
-        csrTitle= (TextView) rootView.findViewById(R.id.textView_title_csr);
-        companyDescTitle= (TextView) rootView.findViewById(R.id.textView_title_company_desc);
-        csr= (TextView) rootView.findViewById(R.id.textView_csr);
+        companyDesc = (TextView) rootView.findViewById(R.id.textView_company_desc);
+        csrTitle = (TextView) rootView.findViewById(R.id.textView_title_csr);
+        companyDescTitle = (TextView) rootView.findViewById(R.id.textView_title_company_desc);
+        csr = (TextView) rootView.findViewById(R.id.textView_csr);
 
         //get any other initial set up done
         companyDesc.setText(R.string.desc_company);
@@ -34,7 +34,10 @@ public class FragmentAbout extends Fragment {
         csrTitle.setText(R.string.csr_title);
         csr.setText(R.string.csr);
 
+
         //return the view that we inflated
         return rootView;
     }
 }
+
+
