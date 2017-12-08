@@ -10,7 +10,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import static com.example.cole.BLOC.R.id.about;
 import static com.example.cole.BLOC.R.id.contact;
@@ -135,10 +134,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 if(x1 > x2)
                 {
-                    Toast.makeText(this, "Right to Left Swap performed", Toast.LENGTH_SHORT).show();
+
                     switch (screen)
                     {
-
                         case 0:
                             currentFragment = new FragmentAbout();
                             changeIconColors(1);
@@ -165,7 +163,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 if(x1 < x2)
                 {
-                    Toast.makeText(this, "Left to Right Swap performed", Toast.LENGTH_SHORT).show();
                     switch (screen)
                     {
                         case 1:
