@@ -40,7 +40,7 @@
     </android.support.constraint.ConstraintLayout>
 
     <LinearLayout
-        android:layout_width="230dp"
+        android:layout_width="228dp"
         android:layout_height="257dp"
         android:orientation="vertical"
         android:layout_gravity="center_horizontal"
@@ -48,48 +48,55 @@
         android:background="@color/colorBackground">
 
         <ImageView
-            android:id="@+id/imageView_so"
-            android:layout_width="match_parent"
+            android:id="@+id/imageView_bb"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/so" />
-
-        <ImageView
-            android:id="@+id/imageView_sg"
-            android:layout_marginTop="-8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/sg" />
-
-        <ImageView
-            android:id="@+id/imageView_sb"
-            android:layout_marginTop="-8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/sb" />
-
-        <ImageView
-            android:id="@+id/imageView_bo"
-            android:layout_marginTop="-8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/bo" />
+            android:layout_marginTop="208dp"
+            app:srcCompat="@drawable/bb" />
 
         <ImageView
             android:id="@+id/imageView_bg"
-            android:layout_marginTop="-8dp"
-            android:layout_width="match_parent"
+            android:layout_marginTop="-90dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="invisible"
             app:srcCompat="@drawable/bg" />
 
         <ImageView
-            android:id="@+id/imageView_bb"
-            android:layout_marginTop="-8dp"
-            android:layout_width="match_parent"
+            android:id="@+id/imageView_bo"
+            android:layout_marginTop="-90dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/bb" />
+            android:visibility="invisible"
+            app:srcCompat="@drawable/bo" />
+
+        <ImageView
+            android:id="@+id/imageView_sb"
+            android:layout_marginTop="-90dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/sb" />
+
+        <ImageView
+            android:id="@+id/imageView_sg"
+            android:layout_marginTop="-90dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/sg" />
+
+        <ImageView
+            android:id="@+id/imageView_so"
+            android:layout_marginTop="-90dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/so" />
     </LinearLayout>
 
     <Button
+        android:id="@+id/button_place"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/above_title_space"
@@ -98,6 +105,16 @@
         android:fontFamily="@font/roboto_regular"
         android:textColor="@color/colorBackground"
         android:text="Place" />
+
+    <TextView
+        android:id="@+id/textView_stacker_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/above_title_space"
+        android:layout_gravity="center"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/colorText"
+        android:text="Score: 0" />
 
 
 </LinearLayout>
