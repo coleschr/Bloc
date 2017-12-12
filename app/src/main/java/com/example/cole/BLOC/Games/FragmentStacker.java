@@ -49,6 +49,7 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
         grid = new int[5][6];
         forward = false;
         score = 0;
+        scoreText.setText("Score: " + score);
         startGame();
 
         //return the view that we inflated
@@ -69,8 +70,6 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
             @Override
             public void onTick(long l) {
                 moveBlock();
-                score++;
-                scoreText.setText("" + score);
             }
 
             @Override
@@ -213,6 +212,7 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
                     block2.setVisibility(View.VISIBLE);
                 }
                 else{
+                    score = 0;
                     resetGame();
                 }
                 break;
@@ -224,6 +224,7 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
                     block3.setVisibility(View.VISIBLE);
                 }
                 else{
+                    score = 0;
                     resetGame();
                 }
                 break;
@@ -234,6 +235,7 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
                     block4.setVisibility(View.VISIBLE);
                 }
                 else{
+                    score = 0;
                     resetGame();
                 }
                 break;
@@ -244,27 +246,32 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
                     block5.setVisibility(View.VISIBLE);
                 }
                 else{
+                    score = 0;
                     resetGame();
                 }
                 break;
             case 5:
                 gameOver = checkIfGameOver();
                 if(gameOver){
+                    score = 0;
                     resetGame();
                 }
                 else{
                     moveTimer.cancel();
                     Toast.makeText(getActivity(), "You Win!", Toast.LENGTH_SHORT).show();
                     currentRow++;
+                    score++;
                 }
                 break;
         }
+        scoreText.setText("Score: " + score);
     }
 
     private void moveToNextRow() {
         currentRow++;
         currentColumn = 0;
         forward = false;
+        score++;
     }
 
     private void updateGrid() {
