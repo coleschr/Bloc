@@ -50,7 +50,7 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
         forward = false;
         score = 0;
         scoreText.setText("Score: " + score);
-        startGame();
+        startGame(1000);
 
         //return the view that we inflated
         return rootView;
@@ -65,8 +65,8 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
         size[5] = 1;
     }
 
-    private void startGame() {
-        moveTimer = new CountDownTimer(3000, 1000) {
+    private void startGame(int time) {
+        moveTimer = new CountDownTimer(3000, time) {
             @Override
             public void onTick(long l) {
                 moveBlock();
@@ -204,6 +204,7 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
             case 0:
                 moveToNextRow();
                 block1.setVisibility(View.VISIBLE);
+                startGame(900);
                 break;
             case 1:
                 gameOver = checkIfGameOver();
@@ -215,6 +216,7 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
                     score = 0;
                     resetGame();
                 }
+                startGame(800);
                 break;
             case 2:
                 gameOver = checkIfGameOver();
@@ -227,6 +229,7 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
                     score = 0;
                     resetGame();
                 }
+                startGame(700);
                 break;
             case 3:
                 gameOver = checkIfGameOver();
@@ -238,6 +241,7 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
                     score = 0;
                     resetGame();
                 }
+                startGame(700);
                 break;
             case 4:
                 gameOver = checkIfGameOver();
@@ -249,6 +253,7 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
                     score = 0;
                     resetGame();
                 }
+                startGame(700);
                 break;
             case 5:
                 gameOver = checkIfGameOver();
@@ -262,6 +267,7 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
                     currentRow++;
                     score++;
                 }
+                startGame(1000);
                 break;
         }
         scoreText.setText("Score: " + score);
