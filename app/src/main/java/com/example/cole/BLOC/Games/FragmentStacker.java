@@ -28,7 +28,7 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
     private int[] size;
     private int[][] grid;
     private int currentRow, currentColumn, score;
-    private boolean forward;
+    private boolean forward, stopTimer;
     private TextView scoreText;
     private CountDownTimer moveTimer;
     private int timerTime;
@@ -55,7 +55,8 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
         score = 0;
         scoreText.setText("Score: " + score);
         timerTime = 800;
-        startGame(timerTime);
+        stopTimer = false;
+        startMovement(timerTime);
 
         //return the view that we inflated
         return rootView;
@@ -73,16 +74,27 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
         size[8] = 2;
     }
 
-    private void startGame(int time) {
-        moveTimer = new CountDownTimer(3000, time) {
+    private void startMovement(int time) {
+        moveTimer = new CountDownTimer(time*30, time) {
             @Override
             public void onTick(long l) {
-                moveBlock();
+                if(currentRow < ROWS) {
+                    moveBlock();
+                }
+                else{
+                    resetGame();
+                }
             }
 
             @Override
             public void onFinish() {
-                moveTimer.start();
+                if(!stopTimer){
+                    moveTimer.cancel();
+                    moveTimer.start();
+                }
+                else{
+                    stopTimer = false;
+                }
             }
         };
         moveTimer.start();
@@ -163,10 +175,11 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
         if(currentRow == 0){
             moveToNextRow();
             block[currentRow].setVisibility(View.VISIBLE);
-            timerTime--;
-            startGame(timerTime);
+            timerTime-=100;
+            stopTimer = true;
+            startMovement(timerTime);
         }
-        else if(currentRow >= ROWS-1){
+        else if(currentRow == ROWS-1){
             gameOver = checkIfGameOver();
             if(gameOver){
                 score = 0;
@@ -178,8 +191,6 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
                 currentRow++;
                 score++;
             }
-            moveTimer.cancel();
-            timerTime = 800;
         }
         else {
             gameOver = checkIfGameOver();
@@ -191,8 +202,9 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
                 score = 0;
                 resetGame();
             }
-            timerTime--;
-            startGame(timerTime);
+            timerTime-=100;
+            stopTimer = true;
+            startMovement(timerTime);
         }
         scoreText.setText("Score: " + score);
     }
@@ -224,6 +236,7 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
 
     private void resetGame() {
         moveTimer.cancel();
+
         block[0].setVisibility(View.VISIBLE);
         for(int i = 1; i<ROWS;i++){
             block[i].setVisibility(View.INVISIBLE);
@@ -247,6 +260,7 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
         currentColumn = 0;
         forward = false;
         timerTime = 800;
-        startGame(timerTime);
+        stopTimer = true;
+        startMovement(timerTime);
     }
 }
