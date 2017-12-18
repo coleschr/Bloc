@@ -6,6 +6,7 @@ import android.os.CountDownTimer;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,8 @@ import android.widget.Toast;
 
 import com.example.cole.BLOC.FragmentExplore;
 import com.example.cole.BLOC.R;
+
+import static android.content.ContentValues.TAG;
 
 /**
  * Created by Cole on 12/4/17.
@@ -59,7 +62,7 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
         forward = false;
         score = 0;
         scoreText.setText("Score: " + score);
-        timerTime = 800;
+        timerTime = 500;
         stopTimer = false;
         startMovement(timerTime);
 
@@ -132,6 +135,7 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
             case R.id.imageView_stacker_back:
                 currentFragment = new FragmentExplore();
                 switchToNewScreen(currentFragment);
+                Log.d(TAG, "back pressed");
                 break;
             case R.id.button_place:
                 if(currentRow < ROWS){
@@ -140,6 +144,10 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
                 else{
                     resetGame();
                 }
+                break;
+            default:
+                Log.d(TAG, "back not pressed");
+                break;
         }
     }
 
@@ -182,7 +190,7 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
             block[currentRow].setVisibility(View.VISIBLE);
             timerTime-=100;
             stopTimer = true;
-            startMovement(timerTime);
+            //startMovement(timerTime);
         }
         else if(currentRow == ROWS-1){
             gameOver = checkIfGameOver();
@@ -209,7 +217,7 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
             }
             timerTime-=100;
             stopTimer = true;
-            startMovement(timerTime);
+            //startMovement(timerTime);
         }
         scoreText.setText("Score: " + score);
     }
@@ -266,7 +274,7 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
         forward = false;
         timerTime = 800;
         stopTimer = true;
-        startMovement(timerTime);
+        //startMovement(timerTime);
     }
 
     public static int dpToPx(int dp)
