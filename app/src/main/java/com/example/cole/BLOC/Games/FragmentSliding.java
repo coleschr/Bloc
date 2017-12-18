@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.GridLayout;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import com.example.cole.BLOC.FragmentExplore;
@@ -26,8 +26,8 @@ public class FragmentSliding extends Fragment implements View.OnClickListener {
     private Fragment currentFragment;
     private ImageView[][] grid;
     private Button scramble;
-    private int nullX, nullY;
-    private GridLayout gridLayout;
+    private int nullRow, nullCol;
+    private FrameLayout gridLayout;
 
     @Nullable
     @Override
@@ -70,11 +70,10 @@ public class FragmentSliding extends Fragment implements View.OnClickListener {
         eight = (ImageView) rootView.findViewById(R.id.imageView8);
         nine = (ImageView) rootView.findViewById(R.id.imageView9);
         scramble = (Button) rootView.findViewById(R.id.button_scramble);
-        gridLayout = (GridLayout) rootView.findViewById(R.id.gridLayout_grid);
+        gridLayout = (FrameLayout) rootView.findViewById(R.id.frameLayout_grid);
     }
 
     private void setOnClickListeners() {
-
         back.setOnClickListener(this);
         scramble.setOnClickListener(this);
         two.setOnClickListener(this);
@@ -85,7 +84,6 @@ public class FragmentSliding extends Fragment implements View.OnClickListener {
         seven.setOnClickListener(this);
         eight.setOnClickListener(this);
         nine.setOnClickListener(this);
-
     }
 
     @Override
@@ -97,61 +95,85 @@ public class FragmentSliding extends Fragment implements View.OnClickListener {
                 break;
             case R.id.imageView2:
                 Log.d(TAG, "onClick: clicking actually works");
-                if(moveBloc(two))
+                if(checkIfCanMoveBloc(two))
                 {
-                    ((ViewGroup)gridLayout.getParent()).removeView(two);
-                    gridLayout.removeViewAt(getLocation(getRow(two), getCol(two)));
-                    gridLayout.addView(two, getLocation(nullX, nullY));
-                    Log.d(TAG, "onClick: in the if statement" + getLocation(nullX, nullY));
+                    two.setX(two.getX() + (nullCol - getCol(two))*270);
+                    two.setY(two.getY() + (nullRow - getRow(two))*270);
+
+                    grid[getRow(two)][getCol(two)] = null;
+                    grid[nullRow][nullCol] = two;
+
+                    Log.d(TAG, "onClick: in the if statement " + getLocation(nullRow, nullCol));
                 }
                 break;
             case R.id.imageView3:
-                if(moveBloc(three))
+                if(checkIfCanMoveBloc(three))
                 {
-                    gridLayout.removeViewAt(getLocation(getRow(three), getCol(three)));
-                    gridLayout.addView(three, getLocation(nullX, nullY));
+                    three.setX(three.getX() + (nullCol - getCol(three))*270);
+                    three.setY(three.getY() + (nullRow - getRow(three))*270);
+
+                    grid[getRow(three)][getCol(three)] = null;
+                    grid[nullRow][nullCol] = three;
                 }
                 break;
             case R.id.imageView4:
-                if(moveBloc(four))
+                if(checkIfCanMoveBloc(four))
                 {
-                    gridLayout.removeViewAt(getLocation(getRow(four), getCol(four)));
-                    gridLayout.addView(four, getLocation(nullX, nullY));
+                    four.setX(four.getX() + (nullCol - getCol(four))*270);
+                    four.setY(four.getY() + (nullRow - getRow(four))*270);
+
+                    grid[getRow(four)][getCol(four)] = null;
+                    grid[nullRow][nullCol] = four;
                 }
                 break;
             case R.id.imageView5:
-                if(moveBloc(five))
+                if(checkIfCanMoveBloc(five))
                 {
-                    gridLayout.removeViewAt(getLocation(getRow(five), getCol(five)));
-                    gridLayout.addView(five, getLocation(nullX, nullY));
+                    five.setX(five.getX() + (nullCol - getCol(five))*270);
+                    five.setY(five.getY() + (nullRow - getRow(five))*270);
+
+                    grid[getRow(five)][getCol(five)] = null;
+                    grid[nullRow][nullCol] = five;
                 }
                 break;
             case R.id.imageView6:
-                if(moveBloc(six))
+                if(checkIfCanMoveBloc(six))
                 {
-                    gridLayout.removeViewAt(getLocation(getRow(six), getCol(six)));
-                    gridLayout.addView(six, getLocation(nullX, nullY));
+                    six.setX(six.getX() + (nullCol - getCol(six))*270);
+                    six.setY(six.getY() + (nullRow - getRow(six))*270);
+
+                    grid[getRow(six)][getCol(six)] = null;
+                    grid[nullRow][nullCol] = six;
                 }
                 break;
             case R.id.imageView7:
-                if(moveBloc(seven))
+                if(checkIfCanMoveBloc(seven))
                 {
-                    gridLayout.removeViewAt(getLocation(getRow(seven), getCol(seven)));
-                    gridLayout.addView(seven, getLocation(nullX, nullY));
+                    seven.setX(seven.getX() + (nullCol - getCol(seven))*270);
+                    seven.setY(seven.getY() + (nullRow - getRow(seven))*270);
+
+                    grid[getRow(seven)][getCol(seven)] = null;
+                    grid[nullRow][nullCol] = seven;
                 }
                 break;
             case R.id.imageView8:
-                if(moveBloc(eight))
+                if(checkIfCanMoveBloc(eight))
                 {
-                    gridLayout.removeViewAt(getLocation(getRow(eight), getCol(eight)));
-                    gridLayout.addView(eight, getLocation(nullX, nullY));
+                    eight.setX(eight.getX() + (nullCol - getCol(eight))*270);
+                    eight.setY(eight.getY() + (nullRow - getRow(eight))*270);
+
+                    grid[getRow(eight)][getCol(eight)] = null;
+                    grid[nullRow][nullCol] = eight;
                 }
                 break;
             case R.id.imageView9:
-                if(moveBloc(nine))
+                if(checkIfCanMoveBloc(nine))
                 {
-                    gridLayout.removeViewAt(getLocation(getRow(nine), getCol(nine)));
-                    gridLayout.addView(nine, getLocation(nullX, nullY));
+                    nine.setX(nine.getX() + (nullCol - getCol(nine))*270);
+                    nine.setY(nine.getY() + (nullRow - getRow(nine))*270);
+
+                    grid[getRow(nine)][getCol(nine)] = null;
+                    grid[nullRow][nullCol] = nine;
                 }
                 break;
 
@@ -203,37 +225,37 @@ public class FragmentSliding extends Fragment implements View.OnClickListener {
         return 0;
     }
 
-    private boolean moveBloc(ImageView image)
+    private boolean checkIfCanMoveBloc(ImageView image)
     {
 
         int row = getRow(image);
         int col = getCol(image);
-        if(row + 1 < 3 && grid[row+1][col]== null)
+        if(row + 1 < 3 && grid[row+1][col] == null)
         {
-            nullX= row+1;
-            nullY= col;
-            Log.d(TAG, "null position: " + nullX + ", " + nullY);
+            nullRow = row+1;
+            nullCol = col;
+            Log.d(TAG, "null position: " + nullRow + ", " + nullCol);
             return true;
         }
-        else if(row -1 >= 0 && grid[row-1][col]== null)
+        else if(row -1 >= 0 && grid[row-1][col] == null)
         {
-            nullX= row-1;
-            nullY= col;
-            Log.d(TAG, "null position: " + nullX + ", " + nullY);
+            nullRow = row-1;
+            nullCol = col;
+            Log.d(TAG, "null position: " + nullRow + ", " + nullCol);
             return true;
         }
-        else if(col+1 < 3 && grid[row][col+1]== null)
+        else if(col+1 < 3 && grid[row][col+1] == null)
         {
-            nullX= row;
-            nullY= col+1;
-            Log.d(TAG, "null position: " + nullX + ", " + nullY);
+            nullRow = row;
+            nullCol = col+1;
+            Log.d(TAG, "null position: " + nullRow + ", " + nullCol);
             return true;
         }
-        else if(col - 1 >= 0 && grid[row][col-1]== null)
+        else if(col - 1 >= 0 && grid[row][col-1] == null)
         {
-            nullX= row;
-            nullY= col-1;
-            Log.d(TAG, "null position: " + nullX + ", " + nullY);
+            nullRow = row;
+            nullCol = col-1;
+            Log.d(TAG, "null position: " + nullRow + ", " + nullCol);
             return true;
         }
 
@@ -244,8 +266,6 @@ public class FragmentSliding extends Fragment implements View.OnClickListener {
     private void updateGridView() {
         int i=-1;
         gridLayout.removeAllViews();
-        gridLayout.setColumnCount(3);
-        gridLayout.setRowCount(3);
         for (int row = 0; row < 3; row++)
         {
             for (int col = 0; col < 3; col++)
