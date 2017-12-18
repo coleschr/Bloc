@@ -44,7 +44,8 @@
         android:layout_width="270dp"
         android:layout_height="270dp"
         android:layout_gravity="center"
-        android:layout_marginTop="@dimen/btwn_subtitle_text_space">
+        android:layout_marginTop="@dimen/btwn_subtitle_text_space"
+        android:background="@color/colorBackground">
 
 
         <ImageView
