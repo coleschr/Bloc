@@ -113,6 +113,8 @@
         android:id="@+id/button_scramble"
         android:layout_width="136dp"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorAccent"
+        android:textColor="@color/colorBackground"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/btwn_subtitle_text_space"
         android:text="Scramble" />

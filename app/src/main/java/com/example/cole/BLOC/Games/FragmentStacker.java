@@ -1,5 +1,6 @@
 package com.example.cole.BLOC.Games;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.annotation.Nullable;
@@ -34,6 +35,7 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
     private int timerTime;
     public static final int ROWS = 9;
     public static final int COLUMNS = 7;
+    private int moveDist;
 
     @Nullable
     @Override
@@ -46,6 +48,9 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
 
         //get any other initial set up done
         setOnClickListeners();
+
+        moveDist = dpToPx(45);
+
         currentRow = 0;
         currentColumn = 0;
         size = new int[ROWS];
@@ -160,11 +165,11 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
 
     private void moveOneSpace(ImageView block) {
         if(forward){
-            block.setX(block.getX() + 160);
+            block.setX(block.getX() + moveDist);
             currentColumn++;
         }
         else{
-            block.setX(block.getX() - 160);
+            block.setX(block.getX() - moveDist);
             currentColumn--;
         }
     }
@@ -262,5 +267,10 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
         timerTime = 800;
         stopTimer = true;
         startMovement(timerTime);
+    }
+
+    public static int dpToPx(int dp)
+    {
+        return (int) (dp * Resources.getSystem().getDisplayMetrics().density);
     }
 }

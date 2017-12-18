@@ -1,5 +1,6 @@
 package com.example.cole.BLOC.Games;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.cole.BLOC.FragmentExplore;
 import com.example.cole.BLOC.R;
@@ -29,7 +31,7 @@ public class FragmentSliding extends Fragment implements View.OnClickListener {
     private Button scramble;
     private int nullRow, nullCol;
     private ArrayList<ImageView> images;
-    public static final int MOVE_DIST = 315;
+    private int moveDist;
 
     @Nullable
     @Override
@@ -43,6 +45,8 @@ public class FragmentSliding extends Fragment implements View.OnClickListener {
 
         //get any other initial set up done
         setOnClickListeners();
+
+        moveDist = dpToPx(90);
 
         grid = new ImageView[3][3];
         images = new ArrayList<ImageView>();
@@ -101,19 +105,19 @@ public class FragmentSliding extends Fragment implements View.OnClickListener {
             case R.id.imageView2:
                 if(checkIfCanMoveBloc(two))
                 {
-                    two.setX(two.getX() + (nullCol - getCol(two))*MOVE_DIST);
-                    two.setY(two.getY() + (nullRow - getRow(two))*MOVE_DIST);
+                    two.setX(two.getX() + (nullCol - getCol(two))*moveDist);
+                    two.setY(two.getY() + (nullRow - getRow(two))*moveDist);
 
                     grid[getRow(two)][getCol(two)] = null;
                     grid[nullRow][nullCol] = two;
-
+                    checkIfGameOver();
                 }
                 break;
             case R.id.imageView3:
                 if(checkIfCanMoveBloc(three))
                 {
-                    three.setX(three.getX() + (nullCol - getCol(three))*MOVE_DIST);
-                    three.setY(three.getY() + (nullRow - getRow(three))*MOVE_DIST);
+                    three.setX(three.getX() + (nullCol - getCol(three))*moveDist);
+                    three.setY(three.getY() + (nullRow - getRow(three))*moveDist);
 
                     grid[getRow(three)][getCol(three)] = null;
                     grid[nullRow][nullCol] = three;
@@ -122,8 +126,8 @@ public class FragmentSliding extends Fragment implements View.OnClickListener {
             case R.id.imageView4:
                 if(checkIfCanMoveBloc(four))
                 {
-                    four.setX(four.getX() + (nullCol - getCol(four))*MOVE_DIST);
-                    four.setY(four.getY() + (nullRow - getRow(four))*MOVE_DIST);
+                    four.setX(four.getX() + (nullCol - getCol(four))*moveDist);
+                    four.setY(four.getY() + (nullRow - getRow(four))*moveDist);
 
                     grid[getRow(four)][getCol(four)] = null;
                     grid[nullRow][nullCol] = four;
@@ -132,8 +136,8 @@ public class FragmentSliding extends Fragment implements View.OnClickListener {
             case R.id.imageView5:
                 if(checkIfCanMoveBloc(five))
                 {
-                    five.setX(five.getX() + (nullCol - getCol(five))*MOVE_DIST);
-                    five.setY(five.getY() + (nullRow - getRow(five))*MOVE_DIST);
+                    five.setX(five.getX() + (nullCol - getCol(five))*moveDist);
+                    five.setY(five.getY() + (nullRow - getRow(five))*moveDist);
 
                     grid[getRow(five)][getCol(five)] = null;
                     grid[nullRow][nullCol] = five;
@@ -142,8 +146,8 @@ public class FragmentSliding extends Fragment implements View.OnClickListener {
             case R.id.imageView6:
                 if(checkIfCanMoveBloc(six))
                 {
-                    six.setX(six.getX() + (nullCol - getCol(six))*MOVE_DIST);
-                    six.setY(six.getY() + (nullRow - getRow(six))*MOVE_DIST);
+                    six.setX(six.getX() + (nullCol - getCol(six))*moveDist);
+                    six.setY(six.getY() + (nullRow - getRow(six))*moveDist);
 
                     grid[getRow(six)][getCol(six)] = null;
                     grid[nullRow][nullCol] = six;
@@ -152,8 +156,8 @@ public class FragmentSliding extends Fragment implements View.OnClickListener {
             case R.id.imageView7:
                 if(checkIfCanMoveBloc(seven))
                 {
-                    seven.setX(seven.getX() + (nullCol - getCol(seven))*MOVE_DIST);
-                    seven.setY(seven.getY() + (nullRow - getRow(seven))*MOVE_DIST);
+                    seven.setX(seven.getX() + (nullCol - getCol(seven))*moveDist);
+                    seven.setY(seven.getY() + (nullRow - getRow(seven))*moveDist);
 
                     grid[getRow(seven)][getCol(seven)] = null;
                     grid[nullRow][nullCol] = seven;
@@ -162,8 +166,8 @@ public class FragmentSliding extends Fragment implements View.OnClickListener {
             case R.id.imageView8:
                 if(checkIfCanMoveBloc(eight))
                 {
-                    eight.setX(eight.getX() + (nullCol - getCol(eight))*MOVE_DIST);
-                    eight.setY(eight.getY() + (nullRow - getRow(eight))*MOVE_DIST);
+                    eight.setX(eight.getX() + (nullCol - getCol(eight))*moveDist);
+                    eight.setY(eight.getY() + (nullRow - getRow(eight))*moveDist);
 
                     grid[getRow(eight)][getCol(eight)] = null;
                     grid[nullRow][nullCol] = eight;
@@ -172,8 +176,8 @@ public class FragmentSliding extends Fragment implements View.OnClickListener {
             case R.id.imageView9:
                 if(checkIfCanMoveBloc(nine))
                 {
-                    nine.setX(nine.getX() + (nullCol - getCol(nine))*MOVE_DIST);
-                    nine.setY(nine.getY() + (nullRow - getRow(nine))*MOVE_DIST);
+                    nine.setX(nine.getX() + (nullCol - getCol(nine))*moveDist);
+                    nine.setY(nine.getY() + (nullRow - getRow(nine))*moveDist);
 
                     grid[getRow(nine)][getCol(nine)] = null;
                     grid[nullRow][nullCol] = nine;
@@ -184,6 +188,21 @@ public class FragmentSliding extends Fragment implements View.OnClickListener {
                 break;
 
         }
+    }
+
+    private void checkIfGameOver() {
+        if(grid[0][1] == two
+                && grid[0][2] == three
+                && grid[1][0] == four
+                && grid[1][1] == five
+                && grid[1][2] == six
+                && grid[2][0] == seven
+                && grid[2][1] == eight
+                && grid[2][2] == nine){
+            Toast.makeText(getActivity(), "You Win!", Toast.LENGTH_SHORT).show();
+            scramblePuzzle();
+        }
+
     }
 
 
@@ -280,8 +299,8 @@ public class FragmentSliding extends Fragment implements View.OnClickListener {
             Log.d(TAG, "random number: " + num);
 
             if(image != null){
-                image.setX(image.getX() + ((i%3) - getCol(image))*MOVE_DIST);
-                image.setY(image.getY() + ((i/3) - getRow(image))*MOVE_DIST);
+                image.setX(image.getX() + ((i%3) - getCol(image))*moveDist);
+                image.setY(image.getY() + ((i/3) - getRow(image))*moveDist);
                 Log.d(TAG, "X, Y: " + ((i%3) - getCol(image)) + ", " + ((i/3) - getRow(image)));
             }
 
@@ -292,5 +311,10 @@ public class FragmentSliding extends Fragment implements View.OnClickListener {
         for(int i = 0; i < 9 ; i++){
             grid[i/3][i%3] = tempGrid[i/3][i%3];
         }
+    }
+
+    public static int dpToPx(int dp)
+    {
+        return (int) (dp * Resources.getSystem().getDisplayMetrics().density);
     }
 }
