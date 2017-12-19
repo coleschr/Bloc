@@ -23,6 +23,7 @@ public class FragmentContact extends Fragment implements View.OnClickListener {
         super.onCreateView(inflater, container, savedInstanceState);
         View rootView = inflater.inflate(R.layout.contact_fragment, container, false);
 
+        //wire any widgets -- must use rootView.findViewById
         TextView website = (TextView) rootView.findViewById(R.id.textView_website);
         TextView instagram = (TextView) rootView.findViewById(R.id.textView_instagram);
         TextView twitter = (TextView) rootView.findViewById(R.id.textView_twitter);
@@ -31,7 +32,7 @@ public class FragmentContact extends Fragment implements View.OnClickListener {
         TextView email = (TextView) rootView.findViewById(R.id.textView_email);
         TextView phone = (TextView) rootView.findViewById(R.id.textView_phone_num);
 
-        //wire any widgets -- must use rootView.findViewById
+        //get any other initial set up done
         website.setOnClickListener(this);
         instagram.setOnClickListener(this);
         twitter.setOnClickListener(this);
@@ -40,7 +41,6 @@ public class FragmentContact extends Fragment implements View.OnClickListener {
         email.setOnClickListener(this);
         phone.setOnClickListener(this);
 
-        //get any other initial set up done
         //return the view that we inflated
         return rootView;
     }
