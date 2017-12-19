@@ -24,29 +24,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Fragment currentFragment;
     private ConstraintLayout layout;
     private float x1, x2;
-    //to implement swipe views
-    //https://developer.android.com/training/implementing-navigation/lateral.html#horizontal-paging
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         wireWidgets();
         setOnClickListeners();
         setUpHomeScreen();
-        //this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-    }
-
-    private void setUpHomeScreen() {
-        screen = 0;
-        currentFragment = new FragmentHome();
-        switchToNewScreen();
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            layout.setBackgroundColor(getColor(R.color.colorBackground));
-        } else { //ECEFF1
-            layout.setBackgroundColor(Color.rgb(236, 239, 241));
-        }
     }
 
     private void wireWidgets() {
@@ -66,6 +53,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         icon[2].setOnClickListener(this);
         icon[3].setOnClickListener(this);
         icon[4].setOnClickListener(this);
+    }
+
+    private void setUpHomeScreen() {
+        screen = 0;
+        currentFragment = new FragmentHome();
+        switchToNewScreen();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            layout.setBackgroundColor(getColor(R.color.colorBackground));
+        } else { //ECEFF1
+            layout.setBackgroundColor(Color.rgb(236, 239, 241));
+        }
     }
 
     @Override

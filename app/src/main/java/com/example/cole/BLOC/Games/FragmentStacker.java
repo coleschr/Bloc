@@ -6,7 +6,6 @@ import android.os.CountDownTimer;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,8 +16,6 @@ import android.widget.Toast;
 
 import com.example.cole.BLOC.FragmentExplore;
 import com.example.cole.BLOC.R;
-
-import static android.content.ContentValues.TAG;
 
 /**
  * Created by Cole on 12/4/17.
@@ -83,27 +80,6 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
         size[8] = 2;
     }
 
-    private void startMovement(int time) {
-        moveTimer = new CountDownTimer(time*30, time) {
-            @Override
-            public void onTick(long l) {
-                if(currentRow < ROWS) {
-                    moveBlock();
-                }
-                else{
-                    resetGame();
-                }
-            }
-
-            @Override
-            public void onFinish() {
-                moveTimer.cancel();
-                moveTimer.start();
-            }
-        };
-        moveTimer.start();
-    }
-
     private void wireWidgets(View rootView) {
         back = (ImageView) rootView.findViewById(R.id.imageView_stacker_back);
         place = (Button) rootView.findViewById(R.id.button_place);
@@ -125,36 +101,25 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
         place.setOnClickListener(this);
     }
 
-    @Override
-    public void onClick(View view) {
-        switch(view.getId()){
-            case R.id.imageView_stacker_back:
-                currentFragment = new FragmentExplore();
-                switchToNewScreen(currentFragment);
-                Log.d(TAG, "back pressed");
-                break;
-            case R.id.button_place:
-                if(currentRow < ROWS){
-                    placeBlock();
+    private void startMovement(int time) {
+        moveTimer = new CountDownTimer(time*30, time) {
+            @Override
+            public void onTick(long l) {
+                if(currentRow < ROWS) {
+                    moveBlock();
                 }
                 else{
                     resetGame();
                 }
-                break;
-            default:
-                Log.d(TAG, "back not pressed");
-                break;
-        }
-    }
+            }
 
-    private void switchToNewScreen(Fragment currentFragment) {
-        //tell the fragment manager that if our current fragment isn't null, to replace whatever is there with it
-        FragmentManager fm = getFragmentManager();
-        if (currentFragment != null) {
-            fm.beginTransaction()
-                    .replace(R.id.fragment_container, currentFragment)
-                    .commit();
-        }
+            @Override
+            public void onFinish() {
+                moveTimer.cancel();
+                moveTimer.start();
+            }
+        };
+        moveTimer.start();
     }
 
     private void moveBlock(){
@@ -175,6 +140,26 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
         else{
             block.setX(block.getX() - moveDist);
             currentColumn--;
+        }
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch(view.getId()){
+            case R.id.imageView_stacker_back:
+                currentFragment = new FragmentExplore();
+                switchToNewScreen(currentFragment);
+                break;
+            case R.id.button_place:
+                if(currentRow < ROWS){
+                    placeBlock();
+                }
+                else{
+                    resetGame();
+                }
+                break;
+            default:
+                break;
         }
     }
 
@@ -262,7 +247,7 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
         }
 
         for(int i = 0; i<ROWS;i++){
-            block[i].setX(block[i].getX() - 160 * numBack[i]);
+            block[i].setX(block[i].getX() - moveDist * numBack[i]);
         }
 
         currentRow = 0;
@@ -275,5 +260,15 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
     public static int dpToPx(int dp)
     {
         return (int) (dp * Resources.getSystem().getDisplayMetrics().density);
+    }
+
+    private void switchToNewScreen(Fragment currentFragment) {
+        //tell the fragment manager that if our current fragment isn't null, to replace whatever is there with it
+        FragmentManager fm = getFragmentManager();
+        if (currentFragment != null) {
+            fm.beginTransaction()
+                    .replace(R.id.fragment_container, currentFragment)
+                    .commit();
+        }
     }
 }
