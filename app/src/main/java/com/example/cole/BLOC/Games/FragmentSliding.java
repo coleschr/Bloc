@@ -200,7 +200,6 @@ public class FragmentSliding extends Fragment implements View.OnClickListener {
                 && grid[2][1] == eight
                 && grid[2][2] == nine){
             Toast.makeText(getActivity(), "You Win!", Toast.LENGTH_SHORT).show();
-            scramblePuzzle();
         }
 
     }
