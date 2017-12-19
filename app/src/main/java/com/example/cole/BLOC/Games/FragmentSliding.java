@@ -25,7 +25,7 @@ import static android.content.ContentValues.TAG;
  */
 
 public class FragmentSliding extends Fragment implements View.OnClickListener {
-    private ImageView back, two, three, four, five, six, seven, eight, nine;
+    private ImageView back, one, two, three, four, five, six, seven, eight, nine;
     private Fragment currentFragment;
     private ImageView[][] grid;
     private Button scramble;
@@ -71,6 +71,7 @@ public class FragmentSliding extends Fragment implements View.OnClickListener {
 
     private void wireWidgets(View rootView) {
         back = (ImageView) rootView.findViewById(R.id.imageView_sliding_back);
+        one = (ImageView) rootView.findViewById(R.id.imageView1);
         two = (ImageView) rootView.findViewById(R.id.imageView2);
         three = (ImageView) rootView.findViewById(R.id.imageView3);
         four = (ImageView) rootView.findViewById(R.id.imageView4);
@@ -200,6 +201,7 @@ public class FragmentSliding extends Fragment implements View.OnClickListener {
                 && grid[2][1] == eight
                 && grid[2][2] == nine){
             Toast.makeText(getActivity(), "You Win!", Toast.LENGTH_SHORT).show();
+            one.setVisibility(View.VISIBLE);
         }
 
     }
@@ -280,6 +282,8 @@ public class FragmentSliding extends Fragment implements View.OnClickListener {
 
     private void scramblePuzzle()
     {
+        one.setVisibility(View.INVISIBLE);
+
         images.add(null);
         images.add(two);
         images.add(three);
