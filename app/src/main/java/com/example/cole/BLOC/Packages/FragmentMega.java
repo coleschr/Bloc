@@ -25,6 +25,7 @@ public class FragmentMega extends Fragment implements View.OnClickListener {
     private Button purchase;
     private int[] image;
     private int currentImage;
+    private int color;
 
     @Nullable
     @Override
@@ -37,6 +38,7 @@ public class FragmentMega extends Fragment implements View.OnClickListener {
 
         //get any other initial set up done
         currentImage = 0;
+        color = 0;
         initializeImages();
         setListeners();
 
@@ -81,16 +83,19 @@ public class FragmentMega extends Fragment implements View.OnClickListener {
                 grey.setBackgroundColor(Color.rgb(245, 124, 0));
                 white.setBackgroundColor(Color.argb(0, 0, 0, 0));
                 fun.setBackgroundColor(Color.argb(0, 0, 0, 0));
+                color = 1;
                 break;
             case R.id.imageView_mega_white:
                 white.setBackgroundColor(Color.rgb(245, 124, 0));
                 grey.setBackgroundColor(Color.argb(0, 0, 0, 0));
                 fun.setBackgroundColor(Color.argb(0, 0, 0, 0));
+                color = 0;
                 break;
             case R.id.imageView_mega_fun:
                 fun.setBackgroundColor(Color.rgb(245, 124, 0));
                 grey.setBackgroundColor(Color.argb(0, 0, 0, 0));
                 white.setBackgroundColor(Color.argb(0, 0, 0, 0));
+                color = 2;
                 break;
             case R.id.imageView_mega_left:
                 if(currentImage != 0) {
@@ -113,7 +118,15 @@ public class FragmentMega extends Fragment implements View.OnClickListener {
                 }
                 break;
             case R.id.button_mega:
-                openWebPage("https://portal.veinternational.org/buybuttons/us021804/btn/mega-package-4/");
+                if(color == 0){
+                    openWebPage("https://portal.veinternational.org/buybuttons/us021804/btn/mega-package-sleek-42/");
+                }
+                else if (color == 1){
+                    openWebPage("https://portal.veinternational.org/buybuttons/us021804/btn/mega-package-slate-43/");
+                }
+                else {
+                    openWebPage("https://portal.veinternational.org/buybuttons/us021804/btn/mega-package-vivid-41/");
+                }
                 break;
             case R.id.imageView_mega_back:
                 Fragment currentFragment = new FragmentProducts();

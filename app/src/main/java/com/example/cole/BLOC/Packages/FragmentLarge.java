@@ -25,6 +25,7 @@ public class FragmentLarge extends Fragment implements View.OnClickListener {
     private Button purchase;
     private int[] image;
     private int currentImage;
+    private int color;
 
     @Nullable
     @Override
@@ -37,6 +38,7 @@ public class FragmentLarge extends Fragment implements View.OnClickListener {
 
         //get any other initial set up done
         currentImage = 0;
+        color = 0;
         initializeImages();
         setListeners();
 
@@ -79,16 +81,19 @@ public class FragmentLarge extends Fragment implements View.OnClickListener {
                 grey.setBackgroundColor(Color.rgb(245, 124, 0));
                 white.setBackgroundColor(Color.argb(0, 0, 0, 0));
                 fun.setBackgroundColor(Color.argb(0, 0, 0, 0));
+                color = 1;
                 break;
             case R.id.imageView_large_white:
                 white.setBackgroundColor(Color.rgb(245, 124, 0));
                 grey.setBackgroundColor(Color.argb(0, 0, 0, 0));
                 fun.setBackgroundColor(Color.argb(0, 0, 0, 0));
+                color = 0;
                 break;
             case R.id.imageView_large_fun:
                 fun.setBackgroundColor(Color.rgb(245, 124, 0));
                 grey.setBackgroundColor(Color.argb(0, 0, 0, 0));
                 white.setBackgroundColor(Color.argb(0, 0, 0, 0));
+                color = 2;
                 break;
             case R.id.imageView_large_left:
                 if(currentImage != 0) {
@@ -111,7 +116,15 @@ public class FragmentLarge extends Fragment implements View.OnClickListener {
                 }
                 break;
             case R.id.button_large:
-                openWebPage("https://portal.veinternational.org/buybuttons/us021804/btn/large-package-3/");
+                if(color == 0){
+                    openWebPage("https://portal.veinternational.org/buybuttons/us021804/btn/large-package-sleek-32/");
+                }
+                else if (color == 1){
+                    openWebPage("https://portal.veinternational.org/buybuttons/us021804/btn/large-package-slate-33/");
+                }
+                else {
+                    openWebPage("https://portal.veinternational.org/buybuttons/us021804/btn/large-package-vivid-31/");
+                }
                 break;
             case R.id.imageView_large_back:
                 Fragment currentFragment = new FragmentProducts();

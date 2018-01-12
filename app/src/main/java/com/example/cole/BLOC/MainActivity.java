@@ -7,12 +7,10 @@ import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
 
-import static android.content.ContentValues.TAG;
 import static com.example.cole.BLOC.R.id.about;
 import static com.example.cole.BLOC.R.id.contact;
 import static com.example.cole.BLOC.R.id.explore;
@@ -154,7 +152,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         case 3:
                             currentFragment = new FragmentExplore();
                             changeIconColors(4);
-                            Log.d(TAG, "explore swiped to");
                             break;
                         default:
                             break;
