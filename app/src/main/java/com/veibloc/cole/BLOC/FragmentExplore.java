@@ -1,4 +1,4 @@
-package com.example.cole.BLOC;
+package com.veibloc.cole.BLOC;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,8 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.cole.BLOC.Games.FragmentSliding;
-import com.example.cole.BLOC.Games.FragmentStacker;
+import com.veibloc.cole.BLOC.Games.FragmentSliding;
+import com.veibloc.cole.BLOC.Games.FragmentStacker;
 
 /**
  * Created by Cole on 10/16/17.

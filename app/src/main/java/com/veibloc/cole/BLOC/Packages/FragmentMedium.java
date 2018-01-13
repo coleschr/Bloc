@@ -1,4 +1,4 @@
-package com.example.cole.BLOC.Packages;
+package com.veibloc.cole.BLOC.Packages;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -13,8 +13,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.example.cole.BLOC.FragmentProducts;
-import com.example.cole.BLOC.R;
+import com.veibloc.cole.BLOC.FragmentProducts;
+import com.veibloc.cole.BLOC.R;
 
 /**
  * Created by Cole on 11/3/17.

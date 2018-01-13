@@ -1,4 +1,4 @@
-package com.example.cole.BLOC;
+package com.veibloc.cole.BLOC;
 
 import android.graphics.Color;
 import android.os.Build;
@@ -11,10 +11,10 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
 
-import static com.example.cole.BLOC.R.id.about;
-import static com.example.cole.BLOC.R.id.contact;
-import static com.example.cole.BLOC.R.id.explore;
-import static com.example.cole.BLOC.R.id.products;
+import static com.veibloc.cole.BLOC.R.id.about;
+import static com.veibloc.cole.BLOC.R.id.contact;
+import static com.veibloc.cole.BLOC.R.id.explore;
+import static com.veibloc.cole.BLOC.R.id.products;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private ImageButton[] icon;

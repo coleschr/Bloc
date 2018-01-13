@@ -1,4 +1,4 @@
-package com.example.cole.BLOC;
+package com.veibloc.cole.BLOC;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

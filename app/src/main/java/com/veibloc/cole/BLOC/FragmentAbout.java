@@ -1,4 +1,4 @@
-package com.example.cole.BLOC;
+package com.veibloc.cole.BLOC;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -30,7 +30,7 @@ public class FragmentAbout extends Fragment {
 
         //get any other initial set up done
         companyDesc.setText(R.string.desc_company);
-        companyDescTitle.setText(com.example.cole.BLOC.R.string.title_company_desc);
+        companyDescTitle.setText(com.veibloc.cole.BLOC.R.string.title_company_desc);
         csrTitle.setText(R.string.csr_title);
         csr.setText(R.string.csr);
 

@@ -1,4 +1,4 @@
-package com.example.cole.BLOC.Games;
+package com.veibloc.cole.BLOC.Games;
 
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -14,8 +14,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.cole.BLOC.FragmentExplore;
-import com.example.cole.BLOC.R;
+import com.veibloc.cole.BLOC.FragmentExplore;
+import com.veibloc.cole.BLOC.R;
 
 /**
  * Created by Cole on 12/4/17.

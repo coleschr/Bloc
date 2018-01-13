@@ -1,4 +1,4 @@
-package com.example.cole.BLOC;
+package com.veibloc.cole.BLOC;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,10 +9,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.cole.BLOC.Packages.FragmentLarge;
-import com.example.cole.BLOC.Packages.FragmentMedium;
-import com.example.cole.BLOC.Packages.FragmentMega;
-import com.example.cole.BLOC.Packages.FragmentSmall;
+import com.veibloc.cole.BLOC.Packages.FragmentLarge;
+import com.veibloc.cole.BLOC.Packages.FragmentMedium;
+import com.veibloc.cole.BLOC.Packages.FragmentMega;
+import com.veibloc.cole.BLOC.Packages.FragmentSmall;
 
 /**
  * Created by Cole on 10/16/17.

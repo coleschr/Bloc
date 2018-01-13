@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.cole.BLOC">
+    package="com.veibloc.cole.BLOC">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.cole.BLOC.MainActivity">
+        <activity android:name="com.veibloc.cole.BLOC.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
