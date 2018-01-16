@@ -45,6 +45,7 @@
         android:orientation="vertical"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/above_title_space"
+        android:id="@+id/LinearLayout_stacker"
         android:background="@color/colorBackground">
 
         <ImageView

@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             {
                 x2 = touchEvent.getX();
 
-                if(x1 > x2)
+                if(x1 > x2 + 150)
                 {
 
                     switch (screen)
@@ -159,7 +159,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     switchToNewScreen();
                 }
 
-                if(x1 < x2)
+                if(x1 + 150 < x2)
                 {
                     switch (screen)
                     {

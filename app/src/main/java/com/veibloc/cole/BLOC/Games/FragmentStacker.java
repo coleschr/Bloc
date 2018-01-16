@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,6 +35,7 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
     private CountDownTimer moveTimer;
     private int timerTime;
     private int moveDist;
+    private LinearLayout layout;
     public static final int ROWS = 9;
     public static final int COLUMNS = 7;
     public static final int INTERVAL = 20;
@@ -94,11 +96,13 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
         block[7] = (ImageView) rootView.findViewById(R.id.imageView_block7);
         block[8] = (ImageView) rootView.findViewById(R.id.imageView_block8);
         scoreText = (TextView) rootView.findViewById(R.id.textView_stacker_score);
+        layout = (LinearLayout) rootView.findViewById(R.id.LinearLayout_stacker);
     }
 
     private void setOnClickListeners() {
         back.setOnClickListener(this);
         place.setOnClickListener(this);
+        layout.setOnClickListener(this);
     }
 
     private void startMovement(int time) {
@@ -158,6 +162,13 @@ public class FragmentStacker extends Fragment implements View.OnClickListener{
                     resetGame();
                 }
                 break;
+            case R.id.LinearLayout_stacker:
+                if(currentRow < ROWS){
+                    placeBlock();
+                }
+                else{
+                    resetGame();
+                }
             default:
                 break;
         }
